@@ -1,6 +1,6 @@
 # 商业热点选题扩展：部署与验收
 
-截至 2026-10-10：**本地配置和真实抓取已测试；官方模板仓库和空历史分支已创建；Actions、真实邮件通知尚未验收**。用户选择电子邮件，还需发件/收件地址及邮箱服务商。不要把本地测试视作云端部署验收。
+截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回和跨运行器恢复均已测试；真实邮件通知及长期定时尚未验收**。用户选择电子邮件，还需发件/收件地址及邮箱服务商。
 
 ## 架构与费用
 
@@ -36,6 +36,8 @@ TrendRadar 原生运行：热榜 8 个成功、2 个 36氪接口失败；4 个 R
 
 分数分别来自榜位、跨来源、重复出现、可解释的商业概念、可视化和来源质量。RSS 不提供真实播放量或阅读量，因此这些数值不是实际传播人数，也不能推出真实增长率。报道发布时间不当作事件发生时间；后者无法确认时记录“未确认”。
 
+两次云端手动运行：[首次抓取](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38059266332)成功获取 193 条热榜与 90 条 RSS，扩展匹配 6 条、聚合 5 个事件，并向 `business-history` 提交新闻库、RSS 库、事件库和报告；[第二次恢复测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38059437281)从该分支恢复了三个数据库，新增 5 条热榜及 2 条 RSS，扩展 `new_articles=0`，再次成功写回。上述数字是云端当次结果，和此前多次本地抓取的累计库不同。
+
 ## 查询和事实核查
 
 ```bash
@@ -47,7 +49,7 @@ uv run python business_topics/search.py --theme 企业经营 --min-score 65
 
 ## 上线前尚需完成
 
-1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；先以手动工作流验收云端抓取、恢复和写回。
+1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；两次手动工作流已通过抓取、恢复、去重和写回验收。
 2. 用户提供邮件服务商及发件、收件地址；SMTP 授权码通过 GitHub Secret 安全设置，不提交到仓库，做真实送达测试。
 3. 云端抓取、历史写回和真实邮件送达全部通过后，取消 `crawler.yml` 中两条 cron 的注释，开启定时运行。
 4. 每周进入仓库 `Actions → Check In → Run workflow` 手动续期。最好在第 6 天前操作；过期导致工作流停用时，可能还须在 Actions 页面重新启用 `Get Hot News`。

@@ -1,0 +1,13 @@
+# Local runtime and credentials
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+output/
+*.log
+.DS_Store

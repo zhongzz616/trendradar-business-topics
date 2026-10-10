@@ -1,7 +1,8 @@
 name: Get Hot News
 
 on:
-  schedule:
+  # 验收阶段只允许手动运行；远端首次抓取、历史恢复/写回和通知实测通过后启用以下定时。
+  # schedule:
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     # ⚠️ 试用版说明 / Trial Mode
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -35,16 +36,18 @@ on:
     #   "15 * * * *"     → 每小时第15分钟 / minute 15 every hour
     #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
     #
-    - cron: "33 * * * *"
+    # - cron: "33 * * * *"
+    # 10:00 北京时间。GitHub 定时任务可能延迟；10:33 的每小时任务会补发。
+    # - cron: "0 2 * * *"
 
   workflow_dispatch:
 
 concurrency:
   group: crawler-${{ github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
   actions: write
 
 jobs:
@@ -58,6 +61,13 @@ jobs:
         with:
           fetch-depth: 1
           clean: true
+
+      - name: Checkout persistent history
+        uses: actions/checkout@v6
+        with:
+          ref: business-history
+          path: history
+          fetch-depth: 1
 
       - name: Check Expiration
         env:
@@ -133,6 +143,9 @@ jobs:
             exit 1
           fi
 
+      - name: Restore persistent SQLite history
+        run: uv run python business_topics/history.py restore history
+
       - name: Run crawler
         if: success()
         env:
@@ -167,7 +180,30 @@ jobs:
           S3_ENDPOINT_URL: ${{ secrets.S3_ENDPOINT_URL }}
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
+          STORAGE_BACKEND: local
         run: uv run python -m trendradar
+
+      - name: Discover business cases and send selected notices
+        if: success()
+        env:
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
+          EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+        run: uv run python business_topics/engine.py
+
+      - name: Save persistent SQLite history
+        if: success()
+        run: |
+          uv run python business_topics/history.py save history
+          git -C history config user.name "github-actions[bot]"
+          git -C history config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C history add --all
+          if ! git -C history diff --cached --quiet; then
+            git -C history commit -m "Update business monitoring history"
+            git -C history push origin HEAD:business-history
+          fi
 
       # --------------------------------------------------------------------------------
       # ☁️ CLOUDFLARE PAGES DEPLOY / 部署到 Cloudflare Pages（可选）

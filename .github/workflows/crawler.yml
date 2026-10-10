@@ -41,6 +41,12 @@ on:
     # - cron: "0 2 * * *"
 
   workflow_dispatch:
+    inputs:
+      notification_test:
+        description: "Send one real test email instead of event notices"
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: crawler-${{ github.ref_name }}
@@ -186,12 +192,28 @@ jobs:
       - name: Discover business cases and send selected notices
         if: success()
         env:
+          NOTIFICATION_TEST: ${{ inputs.notification_test }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
           EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
-        run: uv run python business_topics/engine.py
+        run: |
+          if [ "$NOTIFICATION_TEST" = "true" ]; then
+            uv run python business_topics/engine.py --no-send
+          else
+            uv run python business_topics/engine.py
+          fi
+
+      - name: Test real email delivery
+        if: success() && inputs.notification_test == true
+        env:
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_SMTP_SERVER: ${{ secrets.EMAIL_SMTP_SERVER }}
+          EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+        run: uv run python business_topics/engine.py --test-notification
 
       - name: Save persistent SQLite history
         if: success()

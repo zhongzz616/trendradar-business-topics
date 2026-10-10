@@ -1,13 +1,13 @@
 # 商业热点选题扩展：部署与验收
 
-截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回和跨运行器恢复均已测试；真实邮件通知及长期定时尚未验收**。用户选择 Gmail，发件和收件均为其指定地址；仓库已保存邮件地址及 SMTP 参数，应用专用密码仍待设置。
+截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回、跨运行器恢复和 Gmail 邮件送达均已测试；定时表达式已启用，首次自动触发仍待观察**。用户选择 Gmail，发件和收件均为其指定地址；地址、SMTP 参数和应用专用密码均存于仓库 Secrets。
 
 ## 架构与费用
 
 - 上游 TrendRadar v6.10.0（GPL-3.0）保持核心代码原样；热榜、RSS、关键词和禁用 AI 均通过官方配置。独立 `business_topics` 扩展完成事件聚合、100 分评分、事实核查门槛、选题卡和通知。
-- 公共 GitHub 仓库、标准 GitHub 托管运行器；计划每小时第 33 分钟抓取，北京时间 10:00 加跑每日简报。**当前工作流定时表达式仍被注释，仅允许手动测试**。验收通过后再启用。GitHub 的定时触发允许延迟，10:33 的正常运行可补发尚未发送的简报。**官方“Check In”工作流原样保留**，须每 7 天内手动运行一次。
+- 公共 GitHub 仓库、标准 GitHub 托管运行器；每小时第 33 分钟抓取，北京时间 10:00 加跑每日简报。GitHub 的定时触发允许延迟，10:33 的正常运行可补发尚未发送的简报。**官方“Check In”工作流原样保留**，须每 7 天内手动运行一次。
 - 数据保存在同一仓库的公开 `business-history` 分支：每天的原始新闻及 RSS SQLite、完整的 `business/events.db` 和最新 JSON 报告。无 R2、付费 AI 或付费视频服务。仓库体积会增长，需定期查看大小。GitHub Actions 的免费规则以官方现行政策为准。
-- GitHub Actions 无法主动向当前 Codex 对话发送消息。用户已选择电子邮件；Gmail 地址、`smtp.gmail.com` 和 SSL 465 端口已存入 GitHub Secrets。应用专用密码只能由用户创建并存入 `EMAIL_PASSWORD` Secret；配置后必须做实际送达测试。参见 [Google 应用专用密码说明](https://support.google.com/accounts/answer/185833?hl=en) 和 [SMTP 设置](https://support.google.com/a/answer/176600?hl=en)。
+- GitHub Actions 无法主动向当前 Codex 对话发送消息。用户已选择电子邮件；Gmail 地址、`smtp.gmail.com`、SSL 465 端口和应用专用密码已存入 GitHub Secrets，**测试邮件已获用户确认送达**。参见 [Google 应用专用密码说明](https://support.google.com/accounts/answer/185833?hl=en) 和 [SMTP 设置](https://support.google.com/a/answer/176600?hl=en)。
 - 公开历史分支只应包含公开新闻标题、链接和派生评分，绝不放私人备注、密钥或版权正文。
 
 ## 数据源现状
@@ -38,6 +38,8 @@ TrendRadar 原生运行：热榜 8 个成功、2 个 36氪接口失败；4 个 R
 
 两次云端手动运行：[首次抓取](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38059266332)成功获取 193 条热榜与 90 条 RSS，扩展匹配 6 条、聚合 5 个事件，并向 `business-history` 提交新闻库、RSS 库、事件库和报告；[第二次恢复测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38059437281)从该分支恢复了三个数据库，新增 5 条热榜及 2 条 RSS，扩展 `new_articles=0`，再次成功写回。上述数字是云端当次结果，和此前多次本地抓取的累计库不同。
 
+[真实邮件测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060267884)显示 `channel=email, success=true`，用户确认收到。[正常通知测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060420199)显示当次库中热榜与 RSS 共 293 条、关键词规则命中 6 条、聚合 5 个事件，历史库记录了 `daily:2026-10-10` 的邮件发送。云端最终每日候选为 **1 条达美航空经营预期选题（65 分）**，重要提醒为 0；数量不足 3 条时不凑数。实测中发现标题模板未识别“cuts 2026 forecast”，已修正规则；当天已发送的测试简报仍保留原文，后续运行使用修正后的标题《为什么成本上涨会迫使企业下调经营预期？》。
+
 ## 查询和事实核查
 
 ```bash
@@ -47,11 +49,10 @@ uv run python business_topics/search.py --theme 企业经营 --min-score 65
 
 敏感事件默认拦在“事实核查中”。人工检查原始披露或可靠交叉来源后，可用 `business_topics/verify.py` 为事件记录核查说明和链接；该记录必须同步到历史分支，下一次运行才会沿用。未经核查的危机、财务争议和法律指控不能自动变成确定性结论。
 
-## 上线前尚需完成
+## 已完成的上线步骤与日常维护
 
-1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；两次手动工作流已通过抓取、恢复、去重和写回验收。
-2. 用户在终端运行 `gh secret set EMAIL_PASSWORD -R zhongzz616/trendradar-business-topics` 并输入 Gmail 应用专用密码；该值不提交到仓库，也不发送到对话中。随后通过手动工作流的 `notification_test=true` 发送一封真实测试邮件。
-3. 云端抓取、历史写回和真实邮件送达全部通过后，取消 `crawler.yml` 中两条 cron 的注释，开启定时运行。
-4. 每周进入仓库 `Actions → Check In → Run workflow` 手动续期。最好在第 6 天前操作；过期导致工作流停用时，可能还须在 Actions 页面重新启用 `Get Hot News`。
+1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；手动工作流已通过抓取、恢复、去重、写回和 Gmail 送达验收。应用专用密码仅在 GitHub Secret 中，未提交到仓库。
+2. `crawler.yml` 已启用两条 cron；应查看 Actions 页面确认下一次实际定时触发。定时触发可能延迟或跳过，不能保证严格准点。
+3. 每周进入仓库 `Actions → Check In → Run workflow` 手动续期。最好在第 6 天前操作；过期导致工作流停用时，可能还须在 Actions 页面重新启用 `Get Hot News`。
 
 GitHub Actions [标准公开仓库计费规则](https://docs.github.com/en/billing/concepts/product-billing/github-actions)；[定时任务延迟和 60 天无活动规则](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)。

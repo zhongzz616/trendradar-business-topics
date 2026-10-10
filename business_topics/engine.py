@@ -134,7 +134,7 @@ def action_bucket(title: str) -> str:
         (r"renam|rebrand|drops.*brand name|更名|改名", "更名"),
         (r"recall|召回", "召回"),
         (r"layoff|cuts staff|裁员", "裁员"),
-        (r"cuts forecast|下调.*预期", "下调预期"),
+        (r"cuts\s+(?:\d{4}\s+)?forecast|下调.*预期", "下调预期"),
         (r"price war|价格战", "价格战"),
         (r"acquisition|merger|并购|收购", "并购"),
         (r"privacy backlash|隐私争议", "隐私争议"),

@@ -1,13 +1,13 @@
 # 商业热点选题扩展：部署与验收
 
-截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回和跨运行器恢复均已测试；真实邮件通知及长期定时尚未验收**。用户选择电子邮件，还需发件/收件地址及邮箱服务商。
+截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回和跨运行器恢复均已测试；真实邮件通知及长期定时尚未验收**。用户选择 Gmail，发件和收件均为其指定地址；仓库已保存邮件地址及 SMTP 参数，应用专用密码仍待设置。
 
 ## 架构与费用
 
 - 上游 TrendRadar v6.10.0（GPL-3.0）保持核心代码原样；热榜、RSS、关键词和禁用 AI 均通过官方配置。独立 `business_topics` 扩展完成事件聚合、100 分评分、事实核查门槛、选题卡和通知。
 - 公共 GitHub 仓库、标准 GitHub 托管运行器；计划每小时第 33 分钟抓取，北京时间 10:00 加跑每日简报。**当前工作流定时表达式仍被注释，仅允许手动测试**。验收通过后再启用。GitHub 的定时触发允许延迟，10:33 的正常运行可补发尚未发送的简报。**官方“Check In”工作流原样保留**，须每 7 天内手动运行一次。
 - 数据保存在同一仓库的公开 `business-history` 分支：每天的原始新闻及 RSS SQLite、完整的 `business/events.db` 和最新 JSON 报告。无 R2、付费 AI 或付费视频服务。仓库体积会增长，需定期查看大小。GitHub Actions 的免费规则以官方现行政策为准。
-- GitHub Actions 无法主动向当前 Codex 对话发送消息。用户已选择电子邮件；发件地址、收件地址、SMTP 服务器、端口和授权码将存入 GitHub Secrets，配置后必须做实际送达测试。
+- GitHub Actions 无法主动向当前 Codex 对话发送消息。用户已选择电子邮件；Gmail 地址、`smtp.gmail.com` 和 SSL 465 端口已存入 GitHub Secrets。应用专用密码只能由用户创建并存入 `EMAIL_PASSWORD` Secret；配置后必须做实际送达测试。参见 [Google 应用专用密码说明](https://support.google.com/accounts/answer/185833?hl=en) 和 [SMTP 设置](https://support.google.com/a/answer/176600?hl=en)。
 - 公开历史分支只应包含公开新闻标题、链接和派生评分，绝不放私人备注、密钥或版权正文。
 
 ## 数据源现状
@@ -50,7 +50,7 @@ uv run python business_topics/search.py --theme 企业经营 --min-score 65
 ## 上线前尚需完成
 
 1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；两次手动工作流已通过抓取、恢复、去重和写回验收。
-2. 用户提供邮件服务商及发件、收件地址；SMTP 授权码通过 GitHub Secret 安全设置，不提交到仓库，做真实送达测试。
+2. 用户在终端运行 `gh secret set EMAIL_PASSWORD -R zhongzz616/trendradar-business-topics` 并输入 Gmail 应用专用密码；该值不提交到仓库，也不发送到对话中。随后通过手动工作流的 `notification_test=true` 发送一封真实测试邮件。
 3. 云端抓取、历史写回和真实邮件送达全部通过后，取消 `crawler.yml` 中两条 cron 的注释，开启定时运行。
 4. 每周进入仓库 `Actions → Check In → Run workflow` 手动续期。最好在第 6 天前操作；过期导致工作流停用时，可能还须在 Actions 页面重新启用 `Get Hot News`。
 

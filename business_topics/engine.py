@@ -283,7 +283,7 @@ def score_event(event, articles, prior_events):
     visual = 18 if event["theme"]=="战略决策" and action=="并购" else 15 if event["theme"] in {"商业竞争","企业经营","战略决策","商业创新"} else 13
     if re.search(r"\d|%|亿元|美元|million|billion",event["headline"],re.I):
         visual = min(20,visual+4)
-    novelty = max(2,13-min(8,prior_events*4))
+    novelty = max(2,15-min(8,prior_events*4))
     credible = [s for s in sources if SOURCE_WEIGHT.get(s,0)>=5]
     evidence = 10 if len(credible)>=3 else 8 if len(credible)>=2 else 6 if credible else 3 if len(sources)>=2 else 1
     if not any(a["url"].startswith("https://") for a in articles):
@@ -295,9 +295,7 @@ def score_event(event, articles, prior_events):
     # Headlines alone cannot prove a recall, allegation, or legal/financial accusation.
     eligible = (not needs_check or verified) and evidence>=5 and known_company
     alert_ready = eligible and (verified or len(credible)>=2 and action!="提价")
-    status = "优先推荐" if total>=80 and eligible else "每日候选" if total>=65 else "低于门槛"
-    if needs_check and not verified:
-        status = "事实核查中"
+    status = "事实核查中" if needs_check and not verified else "信息不足" if not eligible else "优先推荐" if total>=80 else "每日候选" if total>=65 else "低于门槛"
     reasons = {"传播热度及增长速度":heat,"商业知识解释价值":knowledge,"动画可视化潜力":visual,"选题新颖性":novelty,"证据质量":evidence,
         "热度说明":"依据榜单名次、跨来源出现和抓取次数估计；无真实阅读量、播放量或增长率。",
         "证据说明":"仅核对标题、链接及来源，未抓取付费正文；争议类待人工复核。"}
@@ -398,7 +396,7 @@ def main():
             major=(event["last_alerted_score"]==0 or info["综合评分"]>=event["last_alerted_score"]+10 or source_count>=event["last_alerted_sources"]+2)
             if info["是否值得立即制作"] and major:alerts.append((event["id"],info,source_count))
         cards.sort(key=lambda x:x[1]["综合评分"],reverse=True)
-        daily=[x[1] for x in cards if x[1]["综合评分"]>=65 and x[1]["事件状态"]!="事实核查中"][:5]
+        daily=[x[1] for x in cards if x[1]["事件状态"] in {"优先推荐","每日候选"}][:5]
         output={"generated_at":moment.isoformat(timespec="seconds"),"raw_rows":len(rows),"matched_rows":matched,"new_articles":new_articles,
             "events":len(cards),"daily_candidates":daily,"important_alerts":[x[1] for x in alerts],"top_cases":[x[1] for x in cards[:10]]}
         (BUSINESS/"latest.json").write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding="utf-8")

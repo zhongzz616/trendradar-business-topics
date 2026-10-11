@@ -46,6 +46,8 @@ TrendRadar 原生运行：热榜 8 个成功、2 个 36氪接口失败；4 个 R
 
 2026-10-11 的 [10:08 定时简报](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38104134915)只发出 1 条达美航空选题；本次原生抓取新增 106 条热榜、30 条 RSS，但两日库中 762 条原始记录仅有 11 条命中规则。复核发现规则漏掉了 Cloudflare 收购 Deno 和半导体设备零部件提价，属于过滤过严。已增加动态英文并购和关键设备提价规则，补充对应的选题标题及防止同一提价事件跨平台重复建档的判定。在 10:08 保存的真实数据库副本上离线回放后，匹配记录为 15 条、聚合 7 个事件、每日候选 3 个（阿斯麦、Cloudflare、达美航空）；阿斯麦两条报道归入同一事件，未产生重要提醒。Cloudflare 收购亦有 [Cloudflare 官方说明](https://blog.cloudflare.com/deno-joins-cloudflare/) 与 [Deno 官方说明](https://deno.com/blog/cloudflare/)；阿斯麦提价仍只有媒体报道，立即提醒需要额外核查。当天简报已发送并记录去重，不会因规则修正再自动重复发送。
 
+修正部署后的 [12:56 云端实测](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38113085444)成功：两日原始记录 844 条、规则匹配 15 条、新入库文章 3 条、聚合事件 7 个；候选为阿斯麦 90 分、Cloudflare 68 分、达美航空 66 分。阿斯麦的两篇报道聚合成一个事件，重要提醒为 0；远端事件库 `PRAGMA quick_check=ok`，当天简报送达记录仍只有 1 条。此次 8 个原生热榜来源成功，36氪两个接口继续 HTTP 500；4 个 RSS 中 3 个成功，界面新闻本次网络连接失败（之前运行曾成功）。
+
 ## 查询和事实核查
 
 ```bash

@@ -9,6 +9,6 @@
 
 当前实施选择：GitHub 仓库独立 `business-history` 分支。它符合“不启用付费服务”的约束；TrendRadar 仍使用原生本地 SQLite，工作流每次运行前恢复当天及前一天的原始库和完整事件库，运行后将它们提交到历史分支。旧日期的原始 SQLite 留在分支中，事件库汇总全文标题、来源链接、企业、主题、评分、状态与观察记录。仓库体积和 Git 历史会增长，需要定期检查；此方案不能保证 GitHub 永久免费或任务准点。
 
-本机已对 2026-10-10 的新闻、RSS 和事件 SQLite 做备份与 `PRAGMA quick_check`，均通过。2026-10-10 的两次 GitHub Actions 手动运行也已验证：第一次向空历史分支保存数据库，第二次在全新运行器上恢复新闻、RSS 和事件库，扩展报告显示 `new_articles=0`，并再次成功写回 `business-history`。随后 Gmail 真实测试邮件已获用户确认收到；正常模式运行已向历史库写入每日简报的发送记录。定时表达式已配置，首次自动触发仍需观察。
+本机已对 2026-10-10 的新闻、RSS 和事件 SQLite 做备份与 `PRAGMA quick_check`，均通过。2026-10-10 的两次 GitHub Actions 手动运行也已验证：第一次向空历史分支保存数据库，第二次在全新运行器上恢复新闻、RSS 和事件库，扩展报告显示 `new_articles=0`，并再次成功写回 `business-history`。随后 Gmail 真实测试邮件已获用户确认收到；正常模式运行已向历史库写入每日简报的发送记录。2026-10-11 两次真正由 `schedule` 触发的运行也成功写回，远端事件库的 `PRAGMA quick_check=ok`；实际触发时间有明显延迟，不能保证严格整小时运行。
 
 来源：TrendRadar README 的“远程云存储 & 签到配置”和“数据保存在哪里？”；GitHub Actions 计费文档；Cloudflare R2 Pricing 文档。

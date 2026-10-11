@@ -1,6 +1,6 @@
 # 商业热点选题扩展：部署与验收
 
-截至 2026-10-10：**本地与 GitHub Actions 的真实抓取、历史写回、跨运行器恢复和 Gmail 邮件送达均已测试；定时表达式已启用，首次自动触发仍待观察**。用户选择 Gmail，发件和收件均为其指定地址；地址、SMTP 参数和应用专用密码均存于仓库 Secrets。
+截至 2026-10-11：**本地与 GitHub Actions 的真实抓取、历史写回、跨运行器恢复和 Gmail 邮件送达均已测试；两次真正由 `schedule` 触发的自动运行已成功**。用户选择 Gmail，发件和收件均为其指定地址；地址、SMTP 参数和应用专用密码均存于仓库 Secrets。
 
 ## 架构与费用
 
@@ -40,6 +40,10 @@ TrendRadar 原生运行：热榜 8 个成功、2 个 36氪接口失败；4 个 R
 
 [真实邮件测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060267884)显示 `channel=email, success=true`，用户确认收到。[正常通知测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060420199)显示当次库中热榜与 RSS 共 293 条、关键词规则命中 6 条、聚合 5 个事件，历史库记录了 `daily:2026-10-10` 的邮件发送。云端最终每日候选为 **1 条达美航空经营预期选题（65 分）**，重要提醒为 0；数量不足 3 条时不凑数。实测中发现标题模板未识别“cuts 2026 forecast”，已修正规则；当天已发送的测试简报仍保留原文，后续运行使用修正后的标题《为什么成本上涨会迫使企业下调经营预期？》。
 
+[上线后回归测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060749947)再次成功：当次库中共 303 条原始记录、规则命中 6 条、聚合 5 个事件，达美航空卡片更新为 66 分和修正后的标题，历史库的当日简报发送记录仍只有 **1 条**，没有重复发送。
+
+北京时间 2026-10-11 03:29 和 06:54 的两次 [自动运行之一](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38093088059)均成功。最新一次抓取 8 个热榜来源成功、36氪两个 NewsNow 接口仍为 HTTP 500，4 个 RSS 成功；在今天与昨天的库中共有 626 条原始记录，规则匹配 11 条，聚合 5 个事件；`new_articles=0`，说明没有把已保存文章重复入库。远端 `business/events.db` 的 `PRAGMA quick_check=ok`，当日简报发送记录未重复。GitHub 定时任务发生过明显延迟或遗漏，不能把每小时第 33 分钟视为严格服务等级保证。北京时间 10:00 的定时简报尚未到触发时间；邮件内容与发送逻辑已在正常模式手动运行中验收。
+
 ## 查询和事实核查
 
 ```bash
@@ -52,7 +56,7 @@ uv run python business_topics/search.py --theme 企业经营 --min-score 65
 ## 已完成的上线步骤与日常维护
 
 1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；手动工作流已通过抓取、恢复、去重、写回和 Gmail 送达验收。应用专用密码仅在 GitHub Secret 中，未提交到仓库。
-2. `crawler.yml` 已启用两条 cron；应查看 Actions 页面确认下一次实际定时触发。定时触发可能延迟或跳过，不能保证严格准点。
+2. `crawler.yml` 已启用两条 cron；两次自动监测已成功。继续在 Actions 页面观察长期运行与北京时间 10:00 简报。定时触发可能延迟或跳过，不能保证严格准点。
 3. 每周进入仓库 `Actions → Check In → Run workflow` 手动续期。最好在第 6 天前操作；过期导致工作流停用时，可能还须在 Actions 页面重新启用 `Get Hot News`。
 
 GitHub Actions [标准公开仓库计费规则](https://docs.github.com/en/billing/concepts/product-billing/github-actions)；[定时任务延迟和 60 天无活动规则](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)。

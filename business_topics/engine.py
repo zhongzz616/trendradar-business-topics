@@ -135,11 +135,24 @@ def action_bucket(title: str) -> str:
         (r"recall|召回", "召回"),
         (r"layoff|cuts staff|裁员", "裁员"),
         (r"cuts\s+(?:\d{4}\s+)?forecast|下调.*预期", "下调预期"),
+        (r"涨价|提价|上调.{0,8}(?:报价|价格)|price hike|raises prices", "提价"),
         (r"price war|价格战", "价格战"),
-        (r"acquisition|merger|并购|收购", "并购"),
+        (r"acquisition|merger|\b(?:acquires?|buys?|merges?)\b|并购|收购", "并购"),
         (r"privacy backlash|隐私争议", "隐私争议"),
     ]
     return next((name for pattern,name in rules if re.search(pattern,title,re.I)), "其他")
+
+def same_numbered_story(first: str, second: str) -> bool:
+    """Link an unnamed headline to a named one only with strong shared details."""
+    percentages = lambda title: set(re.findall(r"\d+(?:\.\d+)?%", title))
+    if not percentages(first).intersection(percentages(second)):
+        return False
+    def pairs(title):
+        value = normalize(title)
+        return {value[i:i+2] for i in range(len(value)-1)}
+    left, right = pairs(first), pairs(second)
+    overlap = len(left & right)
+    return bool(left and right and overlap >= 8 and overlap / min(len(left), len(right)) >= 0.25)
 
 def classify(title: str, groups):
     if NOISE.search(title) and not STRONG_EVENT.search(title):
@@ -237,6 +250,19 @@ def event_for_article(c, item, company, industry, theme):
             best_id, best_sim = row["id"], sim
     if best_id and best_sim >= (0.72 if company == "待识别企业" else 0.58):
         return best_id
+    # A source may say "光刻机巨头" while another names ASML. Require the
+    # same percentage, action, and substantial wording overlap before linking.
+    if action_bucket(item["title"]) != "其他":
+        for row in c.execute("SELECT id,company,headline FROM events WHERE theme=? AND last_updated>=?",(theme,cutoff)):
+            if (company == "待识别企业") == (row["company"] == "待识别企业"):
+                continue
+            if action_bucket(row["headline"]) != action_bucket(item["title"]):
+                continue
+            if not same_numbered_story(row["headline"],item["title"]):
+                continue
+            if row["company"] == "待识别企业":
+                c.execute("UPDATE events SET company=?,industry=?,headline=? WHERE id=?",(company,industry,item["title"],row["id"]))
+            return row["id"]
     # A feed's published_at is the article time, not proof of when the event happened.
     c.execute("INSERT INTO events(company,industry,theme,headline,occurred_at,first_found,last_updated) VALUES(?,?,?,?,?,?,?)",
         (company,industry,theme,item["title"],None,item["first_found"],item["last_seen"]))
@@ -251,8 +277,10 @@ def score_event(event, articles, prior_events):
     repeat_points = min(5,max(0,appearances-1))
     heat = min(25,rank_points+source_points+repeat_points)
     known_company = event["company"] != "待识别企业"
-    knowledge = min(30,18+(6 if known_company else 0)+(5 if len(sources)>=2 else 0))
-    visual = 15 if event["theme"] in {"商业竞争","企业经营","战略决策","商业创新"} else 13
+    action = action_bucket(event["headline"])
+    knowledge = min(30,18+(6 if known_company else 0)+(5 if len(sources)>=2 else 0)
+        +(4 if known_company and action in {"并购","提价"} else 0))
+    visual = 18 if event["theme"]=="战略决策" and action=="并购" else 15 if event["theme"] in {"商业竞争","企业经营","战略决策","商业创新"} else 13
     if re.search(r"\d|%|亿元|美元|million|billion",event["headline"],re.I):
         visual = min(20,visual+4)
     novelty = max(2,13-min(8,prior_events*4))
@@ -266,13 +294,14 @@ def score_event(event, articles, prior_events):
     fact_status = "人工核查通过" if verified else "待核查" if needs_check else "来源已记录，事件细节待复核"
     # Headlines alone cannot prove a recall, allegation, or legal/financial accusation.
     eligible = (not needs_check or verified) and evidence>=5 and known_company
+    alert_ready = eligible and (verified or len(credible)>=2 and action!="提价")
     status = "优先推荐" if total>=80 and eligible else "每日候选" if total>=65 else "低于门槛"
     if needs_check and not verified:
         status = "事实核查中"
     reasons = {"传播热度及增长速度":heat,"商业知识解释价值":knowledge,"动画可视化潜力":visual,"选题新颖性":novelty,"证据质量":evidence,
         "热度说明":"依据榜单名次、跨来源出现和抓取次数估计；无真实阅读量、播放量或增长率。",
         "证据说明":"仅核对标题、链接及来源，未抓取付费正文；争议类待人工复核。"}
-    return total,reasons,fact_status,status,eligible
+    return total,reasons,fact_status,status,alert_ready
 
 def card(c,event):
     arts = list(c.execute("SELECT * FROM articles WHERE event_id=? ORDER BY rank_best IS NULL, rank_best, first_found",(event["id"],)))
@@ -287,6 +316,10 @@ def card(c,event):
         concept,title,visual="成本冲击、利润率与经营杠杆","为什么成本上涨会迫使企业下调经营预期？","用收入、成本与利润的动态面积图展示冲击"
     elif event["theme"] == "企业经营" and action_bucket(event["headline"]) == "裁员":
         concept,title,visual="固定成本、组织调整与现金流","企业裁员时究竟在调整哪些成本？","用成本结构和现金流时间轴展示组织决策"
+    elif event["theme"] == "商业竞争" and action_bucket(event["headline"]) == "提价":
+        concept,title,visual="市场势力、转换成本与供应链定价权","关键设备供应商为何可能拥有涨价能力？","用供应链依赖图和替代成本曲线展示定价权"
+    elif event["theme"] == "战略决策" and action_bucket(event["headline"]) == "并购":
+        concept,title,visual="并购协同、买与建决策与平台战略","为什么企业选择通过并购获取新能力？","用技术能力地图和买与建时间轴展示并购逻辑"
     elif event["theme"] == "品牌危机" and re.search(r"light leak|质量问题",event["headline"],re.I):
         concept,title,visual="产品质量、信任成本与售后决策","小产品缺陷为什么可能变成大品牌问题？","用故障率到信任成本的扩散图展示风险"
     if total < 65:

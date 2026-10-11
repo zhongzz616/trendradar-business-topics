@@ -42,7 +42,9 @@ TrendRadar 原生运行：热榜 8 个成功、2 个 36氪接口失败；4 个 R
 
 [上线后回归测试](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38060749947)再次成功：当次库中共 303 条原始记录、规则命中 6 条、聚合 5 个事件，达美航空卡片更新为 66 分和修正后的标题，历史库的当日简报发送记录仍只有 **1 条**，没有重复发送。
 
-北京时间 2026-10-11 03:29 和 06:54 的两次 [自动运行之一](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38093088059)均成功。最新一次抓取 8 个热榜来源成功、36氪两个 NewsNow 接口仍为 HTTP 500，4 个 RSS 成功；在今天与昨天的库中共有 626 条原始记录，规则匹配 11 条，聚合 5 个事件；`new_articles=0`，说明没有把已保存文章重复入库。远端 `business/events.db` 的 `PRAGMA quick_check=ok`，当日简报发送记录未重复。GitHub 定时任务发生过明显延迟或遗漏，不能把每小时第 33 分钟视为严格服务等级保证。北京时间 10:00 的定时简报尚未到触发时间；邮件内容与发送逻辑已在正常模式手动运行中验收。
+北京时间 2026-10-11 03:29 和 06:54 的两次 [自动运行之一](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38093088059)均成功。最新一次抓取 8 个热榜来源成功、36氪两个 NewsNow 接口仍为 HTTP 500，4 个 RSS 成功；在今天与昨天的库中共有 626 条原始记录，规则匹配 11 条，聚合 5 个事件；`new_articles=0`，说明没有把已保存文章重复入库。远端 `business/events.db` 的 `PRAGMA quick_check=ok`，当日简报发送记录未重复。GitHub 定时任务发生过明显延迟或遗漏，不能把每小时第 33 分钟视为严格服务等级保证。
+
+2026-10-11 的 [10:08 定时简报](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38104134915)只发出 1 条达美航空选题；本次原生抓取新增 106 条热榜、30 条 RSS，但两日库中 762 条原始记录仅有 11 条命中规则。复核发现规则漏掉了 Cloudflare 收购 Deno 和半导体设备零部件提价，属于过滤过严。已增加动态英文并购和关键设备提价规则，补充对应的选题标题及防止同一提价事件跨平台重复建档的判定。在 10:08 保存的真实数据库副本上离线回放后，匹配记录为 15 条、聚合 7 个事件、每日候选 3 个（阿斯麦、Cloudflare、达美航空）；阿斯麦两条报道归入同一事件，未产生重要提醒。Cloudflare 收购亦有 [Cloudflare 官方说明](https://blog.cloudflare.com/deno-joins-cloudflare/) 与 [Deno 官方说明](https://deno.com/blog/cloudflare/)；阿斯麦提价仍只有媒体报道，立即提醒需要额外核查。当天简报已发送并记录去重，不会因规则修正再自动重复发送。
 
 ## 查询和事实核查
 

@@ -22,6 +22,8 @@
   {"name":"星巴克","industry":"餐饮与连锁经营","aliases":["星巴克","Starbucks"]},
   {"name":"肯德基","industry":"餐饮与连锁经营","aliases":["肯德基","KFC"]},
   {"name":"英伟达","industry":"AI及其商业化","aliases":["英伟达","Nvidia"]},
+  {"name":"阿斯麦","industry":"科技与互联网","aliases":["ASML","阿斯麦"]},
+  {"name":"Cloudflare","industry":"科技与互联网","aliases":["Cloudflare"]},
   {"name":"OpenAI","industry":"AI及其商业化","aliases":["OpenAI","ChatGPT"]},
   {"name":"Anthropic","industry":"AI及其商业化","aliases":["Anthropic","Claude"]},
   {"name":"微软","industry":"科技与互联网","aliases":["微软","Microsoft"]},

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-13T00:02:11+08:00",
-  "raw_rows": 961,
-  "matched_rows": 7,
-  "new_articles": 2,
+  "generated_at": "2026-10-13T07:11:56+08:00",
+  "raw_rows": 1050,
+  "matched_rows": 9,
+  "new_articles": 1,
   "events": 11,
   "daily_candidates": [
     {
@@ -625,12 +625,12 @@
       "热度及变化趋势": {
         "来源数": 1,
         "最好榜位": 4,
-        "状态": "首次监测",
+        "状态": "持续出现",
         "真实阅读量": "未知"
       },
-      "综合评分": 65,
+      "综合评分": 66,
       "评分理由": {
-        "传播热度及增长速度": 12,
+        "传播热度及增长速度": 13,
         "商业知识解释价值": 18,
         "动画可视化潜力": 19,
         "选题新颖性": 15,
@@ -703,21 +703,21 @@
       "事件状态": "低于门槛"
     },
     {
-      "事件名称": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
-      "企业": "Anthropic",
-      "行业": "AI及其商业化",
-      "分类": "品牌危机",
+      "事件名称": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
+      "企业": "待识别企业",
+      "行业": "待识别行业",
+      "分类": "战略决策",
       "事件发生时间": "未确认",
-      "首次监测时间": "2026-10-10 22:22:00",
+      "首次监测时间": "2026-10-13 07:11:00",
       "报道发布时间": [
-        "2026-10-09T19:36:56"
+        "2026-10-12T19:35:48"
       ],
-      "事件简述": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
+      "事件简述": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
       "主要新闻来源及原始链接": [
         {
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
-          "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police"
+          "source": "CNBC Business",
+          "url": "https://www.cnbc.com/2026/10/12/ionq-elisity-acquisition-cybersecurity.html",
+          "title": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion"
         }
       ],
       "热度及变化趋势": {
@@ -726,30 +726,30 @@
         "状态": "首次监测",
         "真实阅读量": "未知"
       },
-      "综合评分": 58,
+      "综合评分": 59,
       "评分理由": {
         "传播热度及增长速度": 0,
-        "商业知识解释价值": 24,
-        "动画可视化潜力": 13,
+        "商业知识解释价值": 18,
+        "动画可视化潜力": 20,
         "选题新颖性": 15,
         "证据质量": 6,
         "热度说明": "依据榜单名次、跨来源出现和抓取次数估计；无真实阅读量、播放量或增长率。",
         "证据说明": "仅核对标题、链接及来源，未抓取付费正文；争议类待人工复核。"
       },
       "商业知识概念": [
-        "品牌信任、信息不对称与召回成本"
+        "并购协同、买与建决策与平台战略"
       ],
       "三个选题角度": [
-        "用品牌信任解释这件事",
-        "比较Anthropic与同行的不同选择",
+        "用并购协同解释这件事",
+        "比较待识别企业与同行的不同选择",
         "如果条件改变，商业结果会怎样？"
       ],
       "推荐视频标题": "暂不推荐制作：未达到选题门槛",
-      "知识可视化方法": "用信任账户和损失曲线展示危机扩散",
+      "知识可视化方法": "用技术能力地图和买与建时间轴展示并购逻辑",
       "是否值得立即制作": false,
-      "事实状态": "待核查",
+      "事实状态": "来源已记录，事件细节待复核",
       "核查记录": null,
-      "事件状态": "事实核查中"
+      "事件状态": "信息不足"
     }
   ]
 }

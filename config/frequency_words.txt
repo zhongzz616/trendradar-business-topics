@@ -42,7 +42,7 @@
 /(并购|收购|业务拆分|退出市场|供应链调整|\b(?:acquisition|merger|market exit|divestiture|global expansion)\b)/
 
 [战略决策·动态企业并购]
-+/^[A-Z][A-Za-z0-9.-]{2,}(?:\s+[A-Z][A-Za-z0-9.-]+){0,2}\s+(?:acquires?|buys?|merges?|takes over)\b/
++/^[A-Z][A-Za-z0-9.-]{2,}(?:\s+[A-Z][A-Za-z0-9.-]+){0,2}\s+(?:to\s+)?(?:acquires?|buys?|merges?|takes over)\b/
 
 [商业创新·重点企业]
 +/(瑞幸|蜜雪冰城|泡泡玛特|拼多多|阿里巴巴|京东|美团|字节跳动|腾讯|华为|小米|苹果|特斯拉|比亚迪|宁德时代|麦当劳|星巴克|英伟达|微软|谷歌|亚马逊|\b(?:Apple|Tesla|BYD|Nvidia|OpenAI|Anthropic|Amazon|Meta|Netflix|Costco|Walmart|Shein|Temu|TikTok|Spotify)\b)/

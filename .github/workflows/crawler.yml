@@ -46,6 +46,11 @@ on:
         required: false
         type: boolean
         default: false
+      review_supplement:
+        description: "Send today's full source review once (deduplicated)"
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: crawler-${{ github.ref_name }}
@@ -192,6 +197,7 @@ jobs:
         if: success()
         env:
           NOTIFICATION_TEST: ${{ inputs.notification_test }}
+          REVIEW_SUPPLEMENT: ${{ inputs.review_supplement }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
@@ -200,6 +206,8 @@ jobs:
         run: |
           if [ "$NOTIFICATION_TEST" = "true" ]; then
             uv run python business_topics/engine.py --no-send
+          elif [ "$REVIEW_SUPPLEMENT" = "true" ]; then
+            uv run python business_topics/engine.py --send-review
           else
             uv run python business_topics/engine.py
           fi

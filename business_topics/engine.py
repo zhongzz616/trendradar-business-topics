@@ -19,6 +19,13 @@ from smtplib import SMTP, SMTP_SSL
 from urllib import request
 from zoneinfo import ZoneInfo
 
+if __package__:
+    from .review import collect_sources, render_report, save_report
+    from .selection import migrate_sent_digests, record_recommendation, recommendation_state
+else:
+    from review import collect_sources, render_report, save_report
+    from selection import migrate_sent_digests, record_recommendation, recommendation_state
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "output"
 BUSINESS = DATA / "business"
@@ -33,6 +40,7 @@ THEMES = {
     "消费与营销": ("品牌定位、定价心理与消费者行为", "品牌联名为什么有时能卖爆，有时却会翻车？", "用定位地图和消费者决策路径展示营销机制"),
 }
 CRISIS = re.compile(r"召回|食品安全|虚假宣传|投诉|抵制|处罚|危机|暴雷|财务造假|涉嫌|调查|诉讼|recall|scandal|investigation|fraud|lawsuit", re.I)
+UNCONFIRMED = re.compile(r"疑爆料|爆料|传闻|消息靠谱吗|尚未证实|否认.{0,20}(?:收购|并购)|rumou?r|unconfirmed|denies?.{0,30}(?:acquir|buy|merg)", re.I)
 NOISE = re.compile(r"股价|涨停|跌停|盘中|收盘|开盘|主力资金|明星恋情|绯闻|票房排行|stock price|share price|trading volume", re.I)
 STRONG_EVENT = re.compile(r"价格战|降价|召回|并购|收购|破产|裁员|关店|新品|战略|营销|price war|price cut|recall|acquisition|merger|bankruptcy|layoffs|product launch", re.I)
 SOURCE_WEIGHT = {"techcrunch": 6, "the-verge": 6, "cnbc-business": 7, "jiemian": 6, "cls-hot": 6, "wallstreetcn-hot": 6, "36kr-quick": 5, "36kr-renqi": 5}
@@ -124,13 +132,15 @@ def identify_company(title: str, companies: list[dict]):
     chinese = re.search(r"(?:新兴品牌|初创公司|连锁品牌)([\u4e00-\u9fffA-Za-z0-9·]{2,10})(?:宣布|推出|收购|融资|召回|裁员)", title)
     if chinese:
         return chinese.group(1), "待识别行业"
-    english = re.match(r"^([A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Za-z0-9-]+){0,2})\s+(?:launches|cuts|acquires|recalls|rebrands|raises|files|enters|exits)\b", title)
+    english = re.match(r"^([A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Za-z0-9-]+){0,2})\s+(?:to\s+)?(?:launch(?:es)?|cuts?|acquires?|buys?|merges?|recalls?|rebrands?|raises?|files?|enters?|exits?)\b", title)
     if english and english.group(1) not in {"The", "This", "New"}:
-        return english.group(1), "待识别行业"
+        industry = "科技与互联网" if re.search(r"AI|software|cybersecurity|quantum|cloud", title, re.I) else "待识别行业"
+        return english.group(1), industry
     return "待识别企业", "待识别行业"
 
 def action_bucket(title: str) -> str:
     rules = [
+        (r"否认.{0,20}(?:收购|并购)|denies?.{0,30}(?:acquir|buy|merg)", "并购否认"),
         (r"renam|rebrand|drops.*brand name|更名|改名", "更名"),
         (r"recall|召回", "召回"),
         (r"layoff|cuts staff|裁员", "裁员"),
@@ -239,6 +249,9 @@ def push_remote(client):
 def event_for_article(c, item, company, industry, theme):
     existing = c.execute("SELECT event_id FROM articles WHERE article_key=?", (item["key"],)).fetchone()
     if existing:
+        if company != "待识别企业":
+            c.execute("UPDATE events SET company=?,industry=? WHERE id=? AND company='待识别企业'",
+                      (company,industry,existing[0]))
         return existing[0]
     cutoff = (now() - timedelta(days=3)).strftime("%Y-%m-%d %H:%M:%S")
     best_id, best_sim = None, 0.0
@@ -289,7 +302,8 @@ def score_event(event, articles, prior_events):
     if not any(a["url"].startswith("https://") for a in articles):
         evidence = 0
     total = heat+knowledge+visual+novelty+evidence
-    needs_check = event["theme"]=="品牌危机" or CRISIS.search(event["headline"]) is not None
+    needs_check = (event["theme"]=="品牌危机" or CRISIS.search(event["headline"]) is not None
+                   or any(UNCONFIRMED.search(a["title"]) for a in articles))
     verified = bool(event["verified_at"] and event["verification_note"])
     fact_status = "人工核查通过" if verified else "待核查" if needs_check else "来源已记录，事件细节待复核"
     # Headlines alone cannot prove a recall, allegation, or legal/financial accusation.
@@ -318,6 +332,8 @@ def card(c,event):
         concept,title,visual="市场势力、转换成本与供应链定价权","关键设备供应商为何可能拥有涨价能力？","用供应链依赖图和替代成本曲线展示定价权"
     elif event["theme"] == "战略决策" and action_bucket(event["headline"]) == "并购":
         concept,title,visual="并购协同、买与建决策与平台战略","为什么企业选择通过并购获取新能力？","用技术能力地图和买与建时间轴展示并购逻辑"
+    elif event["theme"] == "战略决策" and action_bucket(event["headline"]) == "并购否认":
+        concept,title,visual="企业信号、信息披露与并购传闻","企业为什么会公开否认并购传闻？","用传闻、正式披露与决策信号的时间轴展示信息变化"
     elif event["theme"] == "品牌危机" and re.search(r"light leak|质量问题",event["headline"],re.I):
         concept,title,visual="产品质量、信任成本与售后决策","小产品缺陷为什么可能变成大品牌问题？","用故障率到信任成本的扩散图展示风险"
     if total < 65:
@@ -335,7 +351,7 @@ def card(c,event):
         "事实状态":fact,"核查记录":event["verification_note"],"事件状态":status}
     return result,len(sources),best
 
-def send_notification(subject: str, body: str):
+def send_notification(subject: str, body: str, html_body: str | None = None):
     if os.environ.get("FEISHU_WEBHOOK_URL"):
         payload={"msg_type":"text","content":{"text":subject+"\n"+body}}
         req=request.Request(os.environ["FEISHU_WEBHOOK_URL"],data=json.dumps(payload,ensure_ascii=False).encode(),headers={"Content-Type":"application/json"})
@@ -348,6 +364,8 @@ def send_notification(subject: str, body: str):
         with request.urlopen(req,timeout=20) as r:return "ntfy",r.status==200
     if os.environ.get("EMAIL_FROM") and os.environ.get("EMAIL_PASSWORD") and os.environ.get("EMAIL_TO"):
         msg=EmailMessage(); msg["Subject"]=subject;msg["From"]=os.environ["EMAIL_FROM"];msg["To"]=os.environ["EMAIL_TO"];msg.set_content(body)
+        if html_body:
+            msg.add_alternative(html_body, subtype="html")
         host=os.environ.get("EMAIL_SMTP_SERVER") or "smtp.qq.com";port=int(os.environ.get("EMAIL_SMTP_PORT") or 465)
         if port==465:
             with SMTP_SSL(host,port,timeout=20) as server:server.login(os.environ["EMAIL_FROM"],os.environ["EMAIL_PASSWORD"]);server.send_message(msg)
@@ -358,6 +376,7 @@ def send_notification(subject: str, body: str):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("--test-notification",action="store_true");p.add_argument("--no-send",action="store_true")
+    p.add_argument("--send-review", action="store_true", help="Send one deduplicated review supplement for today")
     args=p.parse_args()
     if args.test_notification:
         channel,ok=send_notification("TrendRadar 商业选题通知测试","这是一次真实的通知连通性测试。")
@@ -370,6 +389,7 @@ def main():
     for day in days:rows.extend(local_rows(day))
     with sqlite3.connect(DB) as c:
         c.row_factory=sqlite3.Row;ensure_schema(c)
+        migrate_sent_digests(c, ROOT/"business_topics/sent_digest_seed.json")
         matched=0;new_articles=0
         for item in rows:
             theme=classify(item["title"],groups)
@@ -382,40 +402,83 @@ def main():
             if not old:new_articles+=1
             c.execute("""INSERT INTO articles(article_key,event_id,title,source_id,source_name,url,published_at,first_found,last_seen,rank_best,rank_latest,sightings)
                 VALUES(?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(article_key) DO UPDATE SET
-                title=excluded.title,last_seen=excluded.last_seen,rank_best=excluded.rank_best,rank_latest=excluded.rank_latest,sightings=excluded.sightings""",
+                title=CASE WHEN excluded.last_seen>=articles.last_seen THEN excluded.title ELSE articles.title END,
+                first_found=MIN(articles.first_found,excluded.first_found),last_seen=MAX(articles.last_seen,excluded.last_seen),
+                rank_best=CASE WHEN articles.rank_best IS NULL THEN excluded.rank_best
+                               WHEN excluded.rank_best IS NULL THEN articles.rank_best ELSE MIN(articles.rank_best,excluded.rank_best) END,
+                rank_latest=CASE WHEN excluded.last_seen>=articles.last_seen THEN excluded.rank_latest ELSE articles.rank_latest END,
+                sightings=MAX(articles.sightings,excluded.sightings)""",
                 (item["key"],event_id,item["title"],item["source_id"],item["source_name"],item["url"],item["published_at"],item["first_found"],item["last_seen"],item["rank_best"],item["rank_latest"],item["sightings"]))
             c.execute("UPDATE events SET last_updated=MAX(last_updated,?) WHERE id=?",(item["last_seen"],event_id))
         c.commit()
-        cards=[];alerts=[]
+        cards=[];alerts=[];candidate_ids=[]
         for event in c.execute("SELECT * FROM events WHERE last_updated>=? ORDER BY first_found DESC",((moment-timedelta(days=2)).strftime("%Y-%m-%d %H:%M:%S"),)).fetchall():
             info,source_count,best=card(c,event)
             c.execute("UPDATE events SET score=?,score_json=?,knowledge_tags=?,fact_status=?,event_status=? WHERE id=?",
                 (info["综合评分"],json.dumps(info["评分理由"],ensure_ascii=False),json.dumps(info["商业知识概念"],ensure_ascii=False),info["事实状态"],info["事件状态"],event["id"]))
             c.execute("INSERT OR REPLACE INTO observations VALUES(?,?,?,?,?)",(event["id"],moment.isoformat(timespec="seconds"),source_count,best,info["综合评分"]))
+            recommend, state, reason = recommendation_state(c,event,info,moment,SOURCE_WEIGHT)
+            info.update({"事件ID":event["id"],"推荐状态":state,"推荐理由":reason})
             cards.append((event["id"],info))
-            major=(event["last_alerted_score"]==0 or info["综合评分"]>=event["last_alerted_score"]+10 or source_count>=event["last_alerted_sources"]+2)
-            if info["是否值得立即制作"] and major:alerts.append((event["id"],info,source_count))
+            if recommend:
+                candidate_ids.append(event["id"])
+                if info["是否值得立即制作"]:alerts.append((event["id"],info,source_count))
         cards.sort(key=lambda x:x[1]["综合评分"],reverse=True)
-        daily=[x[1] for x in cards if x[1]["事件状态"] in {"优先推荐","每日候选"}][:5]
+        daily=[x[1] for x in cards if x[0] in candidate_ids][:5]
+        selected_ids={x["事件ID"] for x in daily}
+        for event_id,info in cards:
+            if event_id in candidate_ids and event_id not in selected_ids:
+                info["推荐状态"]="人工候补"
+                info["推荐理由"]="达到条件；本次最多推荐5条，保留供人工审查"
+        info_by_id={event_id:info for event_id,info in cards}
+        def describe(source_id,title,url):
+            key=hashlib.sha256((source_id+"|"+(url or normalize(title))).encode()).hexdigest()
+            article=c.execute("SELECT event_id FROM articles WHERE article_key=?",(key,)).fetchone()
+            if article and article[0] in info_by_id:
+                info=info_by_id[article[0]]
+                return {"event_id":article[0],"score":info["综合评分"],
+                        "decision":("本次推荐·" if article[0] in selected_ids else "")+info["推荐状态"],
+                        "decision_reason":info["推荐理由"]}
+            if NOISE.search(title) and not STRONG_EVENT.search(title):
+                return {"decision":"行情或娱乐规则排除","decision_reason":"原始标题仍保留，方便人工复核"}
+            theme=classify(title,groups)
+            return {"decision":"未进入候选","decision_reason":f"命中{theme}，暂无符合推荐条件的事件" if theme else "商业关键词组合未命中；这不代表没有商业价值，请人工复核"}
+        sources=collect_sources(DATA,ROOT,moment,describe)
         output={"generated_at":moment.isoformat(timespec="seconds"),"raw_rows":len(rows),"matched_rows":matched,"new_articles":new_articles,
-            "events":len(cards),"daily_candidates":daily,"important_alerts":[x[1] for x in alerts],"top_cases":[x[1] for x in cards[:10]]}
-        (BUSINESS/"latest.json").write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding="utf-8")
+            "events":len(cards),"daily_candidates":daily,"important_alerts":[x[1] for x in alerts],"top_cases":[x[1] for x in cards[:10]],
+            "event_decisions":[x[1] for x in cards],"platform_lists":sources,
+            "suppressed_repeats":sum(x[1]["推荐状态"]=="已推荐·无实质进展" for x in cards)}
+        plain,document=render_report(output)
         if not args.no_send:
-            for event_id,info,source_count in alerts:
-                body=f"{info['事件名称']}\n评分 {info['综合评分']}/100｜{info['商业知识概念'][0]}\n{info['推荐视频标题']}\n"+"\n".join(x["url"] for x in info["主要新闻来源及原始链接"][:2])
-                channel,ok=send_notification("重要商业热点",body)
-                if ok:
-                    c.execute("UPDATE events SET last_alerted_score=?,last_alerted_sources=? WHERE id=?",(info["综合评分"],source_count,event_id))
-                    c.execute("INSERT INTO deliveries VALUES(?,?,?,?)",(f"alert:{event_id}:{info['综合评分']}:{source_count}",moment.isoformat(),channel,"sent"))
-            if moment.hour>=10:
-                key="daily:"+moment.date().isoformat()
-                if not c.execute("SELECT 1 FROM deliveries WHERE delivery_key=?",(key,)).fetchone():
-                    body="\n\n".join(f"{i+1}. {x['推荐视频标题']}（{x['综合评分']}分）\n{x['事件名称']}\n"+(x["主要新闻来源及原始链接"][0]["url"] if x["主要新闻来源及原始链接"] else "") for i,x in enumerate(daily)) or "今天暂没有达到筛选门槛且通过事实核查的商业选题。"
-                    channel,ok=send_notification("每日商业选题简报",body)
-                    if ok:c.execute("INSERT INTO deliveries VALUES(?,?,?,?)",(key,moment.isoformat(),channel,"sent"))
+            day=moment.date().isoformat()
+            key=("review:v2:" if args.send_review else "daily:")+day
+            due=(args.send_review or moment.hour>=10) and not c.execute("SELECT 1 FROM deliveries WHERE delivery_key=?",(key,)).fetchone()
+            if due:
+                subject=("商业热点审查补充｜" if args.send_review else "每日商业选题审查｜")+day
+                channel,ok=send_notification(subject,plain,document)
+                output["notification_result"]={"channel":channel,"success":ok,"delivery_key":key}
+                if not ok:
+                    raise RuntimeError("Review notification was not delivered")
+                c.execute("INSERT INTO deliveries VALUES(?,?,?,?)",(key,moment.isoformat(),channel,"sent"))
+                for info in daily:
+                    record_recommendation(c,key,info["事件ID"],moment)
+                save_report(BUSINESS/"digests",day+("-supplement" if args.send_review else ""),output,plain,document)
+                c.commit()
+            elif not args.send_review:
+                for event_id,info,source_count in alerts:
+                    body=f"{info['事件名称']}\n{info['推荐状态']}：{info['推荐理由']}\n评分 {info['综合评分']}/100｜{info['商业知识概念'][0]}\n{info['推荐视频标题']}\n"+"\n".join(x["url"] for x in info["主要新闻来源及原始链接"][:2])
+                    channel,ok=send_notification("重要商业热点",body)
+                    if ok:
+                        alert_key=f"alert:{event_id}:{moment.isoformat(timespec='seconds')}"
+                        c.execute("UPDATE events SET last_alerted_score=?,last_alerted_sources=? WHERE id=?",(info["综合评分"],source_count,event_id))
+                        c.execute("INSERT INTO deliveries VALUES(?,?,?,?)",(alert_key,moment.isoformat(),channel,"sent"))
+                        record_recommendation(c,alert_key,event_id,moment)
+                        c.commit()
+        save_report(BUSINESS,"latest",output,plain,document)
+        save_report(BUSINESS/"reviews",moment.date().isoformat(),output,plain,document)
         c.commit()
     push_remote(client)
-    print(json.dumps({k:v for k,v in output.items() if k not in {"top_cases","daily_candidates","important_alerts"}},ensure_ascii=False))
+    print(json.dumps({k:v for k,v in output.items() if k not in {"top_cases","daily_candidates","important_alerts","platform_lists","event_decisions"}},ensure_ascii=False))
     print("event_database",DB)
     print("report",BUSINESS/"latest.json")
 

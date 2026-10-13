@@ -56,12 +56,18 @@ def sync(mode: str, history: Path) -> list[str]:
     if copy_db(source, destination):
         copied.append(str(relative))
     if mode == "save":
-        report = OUTPUT / "business/latest.json"
-        if report.exists():
-            target = history / "business/latest.json"
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(report, target)
-            copied.append("business/latest.json")
+        reports = [OUTPUT / "business" / f"latest.{extension}" for extension in ("json", "html", "txt")]
+        for folder in ("reviews", "digests"):
+            directory = OUTPUT / "business" / folder
+            if directory.exists():
+                reports.extend(p for p in directory.iterdir() if p.suffix in {".json", ".html", ".txt"})
+        for report in reports:
+            if report.exists():
+                relative = report.relative_to(OUTPUT)
+                target = history / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(report, target)
+                copied.append(str(relative))
     return copied
 
 

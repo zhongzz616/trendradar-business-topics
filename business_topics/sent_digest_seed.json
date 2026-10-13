@@ -1,0 +1,124 @@
+[
+  {
+    "delivery_key": "daily:2026-10-12",
+    "report_commit": "7e57d7e2e2476bdfaa36dacae265dfb1163bd15b",
+    "events": [
+      {
+        "headline": "ASML零部件价格全线上调10%，三星SK海力士接受涨价，半导体设备成本压力蔓延",
+        "articles": [
+          {
+            "source_id": "cls-hot",
+            "url": "https://www.cls.cn/detail/2501087",
+            "title": "统一涨价10%！光刻机巨头上调在韩零部件报价 三星、SK海力士已“买单”"
+          },
+          {
+            "source_id": "wallstreetcn-hot",
+            "url": "https://wallstreetcn.com/articles/3783320",
+            "title": "ASML零部件价格全线上调10%，三星SK海力士接受涨价，半导体设备成本压力蔓延"
+          }
+        ]
+      },
+      {
+        "headline": "Cloudflare acquires Deno to improve its Workers programming model",
+        "articles": [
+          {
+            "source_id": "techcrunch",
+            "url": "https://techcrunch.com/2026/10/10/cloudflare-acquires-deno-to-improve-its-workers-programming-model/",
+            "title": "Cloudflare acquires Deno to improve its Workers programming model"
+          }
+        ]
+      },
+      {
+        "headline": "东百集团：子公司拟3.16亿元收购快灵光电52.6667%股权",
+        "articles": [
+          {
+            "source_id": "jiemian",
+            "url": "https://www.jiemian.com/article/15177179.html",
+            "title": "东百集团：子公司拟3.16亿元收购快灵光电52.6667%股权"
+          }
+        ]
+      },
+      {
+        "headline": "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong",
+        "articles": [
+          {
+            "source_id": "cnbc-business",
+            "url": "https://www.cnbc.com/2026/10/09/delta-air-lines-dal-q3-2026-earnings.html",
+            "title": "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong"
+          }
+        ]
+      },
+      {
+        "headline": "分众传媒：收到市场监管总局附加限制性条件批准公司收购新潮传媒股权案反垄断审查决定",
+        "articles": [
+          {
+            "source_id": "jiemian",
+            "url": "https://www.jiemian.com/article/15177136.html",
+            "title": "分众传媒：收到市场监管总局附加限制性条件批准公司收购新潮传媒股权案反垄断审查决定"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "delivery_key": "daily:2026-10-13",
+    "report_commit": "2e1e7456000fa307c62429a649615c4e0f99ca80",
+    "events": [
+      {
+        "headline": "ASML零部件价格全线上调10%，三星SK海力士接受涨价，半导体设备成本压力蔓延",
+        "articles": [
+          {
+            "source_id": "cls-hot",
+            "url": "https://www.cls.cn/detail/2501087",
+            "title": "统一涨价10%！光刻机巨头上调在韩零部件报价 三星、SK海力士已“买单”"
+          },
+          {
+            "source_id": "wallstreetcn-hot",
+            "url": "https://wallstreetcn.com/articles/3783320",
+            "title": "ASML零部件价格全线上调10%，三星SK海力士接受涨价，半导体设备成本压力蔓延"
+          }
+        ]
+      },
+      {
+        "headline": "Cloudflare acquires Deno to improve its Workers programming model",
+        "articles": [
+          {
+            "source_id": "techcrunch",
+            "url": "https://techcrunch.com/2026/10/10/cloudflare-acquires-deno-to-improve-its-workers-programming-model/",
+            "title": "Cloudflare acquires Deno to improve its Workers programming model"
+          }
+        ]
+      },
+      {
+        "headline": "东百集团：子公司拟3.16亿元收购快灵光电52.6667%股权",
+        "articles": [
+          {
+            "source_id": "jiemian",
+            "url": "https://www.jiemian.com/article/15177179.html",
+            "title": "东百集团：子公司拟3.16亿元收购快灵光电52.6667%股权"
+          }
+        ]
+      },
+      {
+        "headline": "星巴克否认收购Chipotle",
+        "articles": [
+          {
+            "source_id": "jiemian",
+            "url": "https://www.jiemian.com/article/15181535.html",
+            "title": "星巴克否认收购Chipotle"
+          }
+        ]
+      },
+      {
+        "headline": "分众传媒：收到市场监管总局附加限制性条件批准公司收购新潮传媒股权案反垄断审查决定",
+        "articles": [
+          {
+            "source_id": "jiemian",
+            "url": "https://www.jiemian.com/article/15177136.html",
+            "title": "分众传媒：收到市场监管总局附加限制性条件批准公司收购新潮传媒股权案反垄断审查决定"
+          }
+        ]
+      }
+    ]
+  }
+]

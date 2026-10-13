@@ -75,6 +75,10 @@ uv run python business_topics/search.py --theme 企业经营 --min-score 65
 
 手动运行 `Get Hot News` 的 `review_supplement=true` 可发送当日完整审查补充，使用独立送达键，最多发送一次；正常日报仍沿用北京时间10:00及延迟补发逻辑。
 
+[12:20云端实测](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38345840002)成功：两日原始库1293条、关键词命中9条、活跃聚合事件11个；邮件展示80条热榜及20条RSS标题，4个重复选题退出新增推荐，仅推荐IonQ这一条新增候选（71分）。Gmail SMTP接受发送，送达记录为`review:v2:2026-10-13`，原有当天日报记录保留1条。HTML、JSON和文本形式的实际已发补充邮件存于`business/digests/2026-10-13-supplement.*`；当日滚动审查存于`business/reviews/2026-10-13.*`。
+
+[12:23第二次恢复运行](https://github.com/zhongzz616/trendradar-business-topics/actions/runs/38346073564)亦成功：新增推荐0条、5个已推荐事件被抑制，补充邮件发送记录仍为1条，未再发邮件；数据库完整性检查为`ok`。榜单快照来自TrendRadar的聚合接口，可能含缓存；报告中的快照时间是抓取时间，不是平台官方数据生成时间。
+
 ## 已完成的上线步骤与日常维护
 
 1. 官方模板仓库 `zhongzz616/trendradar-business-topics` 和 `business-history` 分支已建立；手动工作流已通过抓取、恢复、去重、写回和 Gmail 送达验收。应用专用密码仅在 GitHub Secret 中，未提交到仓库。

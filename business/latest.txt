@@ -1,10 +1,10 @@
 商业热点人工审查简报｜2026-10-15
-生成时间：2026-10-15T02:51:36+08:00（北京时间）
+生成时间：2026-10-15T06:34:58+08:00（北京时间）
 新增或有实质进展的推荐：0条；不凑数。
 原始平台列表保留所有主题；RSS最新文章不代表热度排名。
 
 微博｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 入职第一天因截图社死
 https://s.weibo.com/weibo?q=%E5%85%A5%E8%81%8C%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%9B%A0%E6%88%AA%E5%9B%BE%E7%A4%BE%E6%AD%BB
 
@@ -29,27 +29,27 @@ https://s.weibo.com/weibo?q=%23%E7%94%B7%E5%AD%90%E5%9B%A0%E7%BB%8F%E6%B5%8E%E6%
 https://s.weibo.com/weibo?q=%E9%99%88%E5%B0%8F%E6%98%A5
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位7. 胡先煦 刁卓
-https://s.weibo.com/weibo?q=%E8%83%A1%E5%85%88%E7%85%A6+%E5%88%81%E5%8D%93
+榜位7. 肖战这把火已经烧到天边了
+https://s.weibo.com/weibo?q=%23%E8%82%96%E6%88%98%E8%BF%99%E6%8A%8A%E7%81%AB%E5%B7%B2%E7%BB%8F%E7%83%A7%E5%88%B0%E5%A4%A9%E8%BE%B9%E4%BA%86%23
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 奚梦瑶和现在简直判若两人
-https://s.weibo.com/weibo?q=%23%E5%A5%9A%E6%A2%A6%E7%91%B6%E5%92%8C%E7%8E%B0%E5%9C%A8%E7%AE%80%E7%9B%B4%E5%88%A4%E8%8B%A5%E4%B8%A4%E4%BA%BA%23
+榜位8. 徐梦洁演技口碑
+https://s.weibo.com/weibo?q=%23%E5%BE%90%E6%A2%A6%E6%B4%81%E6%BC%94%E6%8A%80%E5%8F%A3%E7%A2%91%23
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位9. 虎跳峡观景台跳江者尚未打捞到
+榜位9. 7天6夜堵截蒙古国火灾330余公里
+https://s.weibo.com/weibo?q=%237%E5%A4%A96%E5%A4%9C%E5%A0%B5%E6%88%AA%E8%92%99%E5%8F%A4%E5%9B%BD%E7%81%AB%E7%81%BE330%E4%BD%99%E5%85%AC%E9%87%8C%23
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位10. 虎跳峡观景台跳江者尚未打捞到
 https://s.weibo.com/weibo?q=%23%E8%99%8E%E8%B7%B3%E5%B3%A1%E8%A7%82%E6%99%AF%E5%8F%B0%E8%B7%B3%E6%B1%9F%E8%80%85%E5%B0%9A%E6%9C%AA%E6%89%93%E6%8D%9E%E5%88%B0%23
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位10. iPhoneDuo维修价格出炉
-https://s.weibo.com/weibo?q=%23iPhoneDuo%E7%BB%B4%E4%BF%AE%E4%BB%B7%E6%A0%BC%E5%87%BA%E7%82%89%23
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 抖音｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
-榜位1. 中朝新鸭绿江大桥将开通
-https://www.douyin.com/hot/2694377
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
+榜位1. 小鹏正式宣布对外卖技术
+https://www.douyin.com/hot/2694823
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位2. 美国9月CPI同比上涨3.7%
@@ -60,20 +60,20 @@ https://www.douyin.com/hot/2695704
 https://www.douyin.com/hot/2695578
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位4. 英雄联盟S16 LPL出征片
-https://www.douyin.com/hot/2694892
+榜位4. 中朝新鸭绿江大桥将开通
+https://www.douyin.com/hot/2694377
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位5. 中方回应英情报官员涉华错误言论
 https://www.douyin.com/hot/2694275
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位6. 火遍外网的ChinaHaul是什么
-https://www.douyin.com/hot/2694649
+榜位6. 英雄联盟S16 LPL出征片
+https://www.douyin.com/hot/2694892
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位7. 小鹏正式宣布对外卖技术
-https://www.douyin.com/hot/2694823
+榜位7. 火遍外网的ChinaHaul是什么
+https://www.douyin.com/hot/2694649
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位8. 我的古早味秋冬穿搭
@@ -90,7 +90,7 @@ https://www.douyin.com/hot/2694335
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 百度热搜｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 今年双11告别算数题
 https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E5%8F%8C11%E5%91%8A%E5%88%AB%E7%AE%97%E6%95%B0%E9%A2%98
 
@@ -119,12 +119,12 @@ https://www.baidu.com/s?wd=%E9%99%88%E5%B0%8F%E6%98%A5%E5%BC%9F%E5%BC%9F
 https://www.baidu.com/s?wd=%E8%A7%A3%E6%94%BE%E5%86%9B%E6%BC%94%E7%A4%BA%E5%8C%95%E9%A6%96%E6%9E%AA
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 佛光寺小狗门上刨洞被做成文创爆火
-https://www.baidu.com/s?wd=%E4%BD%9B%E5%85%89%E5%AF%BA%E5%B0%8F%E7%8B%97%E9%97%A8%E4%B8%8A%E5%88%A8%E6%B4%9E%E8%A2%AB%E5%81%9A%E6%88%90%E6%96%87%E5%88%9B%E7%88%86%E7%81%AB
+榜位8. 铁打的片仔癀 流水的董事长
+https://www.baidu.com/s?wd=%E9%93%81%E6%89%93%E7%9A%84%E7%89%87%E4%BB%94%E7%99%80+%E6%B5%81%E6%B0%B4%E7%9A%84%E8%91%A3%E4%BA%8B%E9%95%BF
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位9. 小伙徒步时高反 野外支帐篷躺卧3天
-https://www.baidu.com/s?wd=%E5%B0%8F%E4%BC%99%E5%BE%92%E6%AD%A5%E6%97%B6%E9%AB%98%E5%8F%8D+%E9%87%8E%E5%A4%96%E6%94%AF%E5%B8%90%E7%AF%B7%E8%BA%BA%E5%8D%A73%E5%A4%A9
+榜位9. 今年最有腔调的老人都在山东
+https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E6%9C%80%E6%9C%89%E8%85%94%E8%B0%83%E7%9A%84%E8%80%81%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%B1%B1%E4%B8%9C
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位10. 武网头号种子萨巴伦卡爆冷出局
@@ -133,7 +133,7 @@ https://www.baidu.com/s?wd=%E6%AD%A6%E7%BD%91%E5%A4%B4%E5%8F%B7%E7%A7%8D%E5%AD%9
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 财联社热门｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 李乐成调研长鑫科技
 https://www.cls.cn/detail/2504873
 
@@ -176,7 +176,7 @@ https://www.cls.cn/detail/2504650
 行情或娱乐规则排除：原始标题仍保留，方便人工复核
 
 华尔街见闻｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 五个月来最大涨幅！美国9月CPI同比3.7%，核心CPI同比2.6%超预期，10月加息预期飙升
 https://wallstreetcn.com/articles/3783634
 
@@ -189,28 +189,28 @@ https://wallstreetcn.com/articles/3783586
 https://wallstreetcn.com/articles/3783569
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位4. AI交易逻辑生变！从日韩到美国，全球芯片股惨跌，明星IPO搁浅、长鑫技术突破接连敲警钟
-https://wallstreetcn.com/articles/3783558
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位5. 10月加息押注所剩无几，今晚，美国CPI能否再添一击？
+榜位4. 10月加息押注所剩无几，今晚，美国CPI能否再添一击？
 https://wallstreetcn.com/articles/3783596
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位6. 财报季开局银行股分化，美股指收跌，存储股续跌打压科技股，苹果盘中市值突破5万亿
+榜位5. 财报季开局银行股分化，美股指收跌，存储股续跌打压科技股，苹果盘中市值突破5万亿
 https://wallstreetcn.com/articles/3783492
 
 行情或娱乐规则排除：原始标题仍保留，方便人工复核
-榜位7. 美联储三把手威廉姆斯：今年或再加息一次，目前认为2027年没有必要加息
+榜位6. 美联储三把手威廉姆斯：今年或再加息一次，目前认为2027年没有必要加息
 https://wallstreetcn.com/articles/3783560
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 传奇投资者Paul Tudor Jones：当前美股类似2000年科网泡沫破灭前夕，我明年将全年做空
+榜位7. 传奇投资者Paul Tudor Jones：当前美股类似2000年科网泡沫破灭前夕，我明年将全年做空
 https://wallstreetcn.com/articles/3783579
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位9. 报道：Anthropic今天将公布Q3财务数据
+榜位8. 报道：Anthropic今天将公布Q3财务数据
 https://wallstreetcn.com/articles/3783580
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位9. 内存崩溃，高盛：谁高位接盘了美股科技？
+https://wallstreetcn.com/articles/3783632
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位10. 阿斯麦Q3利润49.6亿欧元大超预期，上调全年展望，订单排至2030年并正评估扩产 | 财报见闻
@@ -219,50 +219,50 @@ https://wallstreetcn.com/articles/3783594
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 知乎｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 微信上线绿泡泡短剧，腾讯此前多次进军短剧市场都效果平平，这次能成功吗？能撼动红果的地位吗？
 https://www.zhihu.com/question/2093689082383524747
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位2. 怎么看 OpenAI 的 NS 数学证明被发现其实没遵循 Spanish program？
-https://www.zhihu.com/question/2093654423369152454
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位3. 国台办回应蔡康永现身沈伯洋竞选活动，在大是大非问题上没有任何模糊的空间，哪些信息值得关注？
-https://www.zhihu.com/question/2093662309310620149
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位4. 美国 9 月 CPI 数据公布，同比上涨 3.7%，高于市场预期的 3.6%，释放了哪些信号？
+榜位2. 美国 9 月 CPI 数据公布，同比上涨 3.7%，高于市场预期的 3.6%，释放了哪些信号？
 https://www.zhihu.com/question/2093811458442092969
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位5. 四部门要求新车研发必须包含「两冬一夏」测试，会改变汽车行业格局吗？
+榜位3. 四部门要求新车研发必须包含「两冬一夏」测试，会改变汽车行业格局吗？
 https://www.zhihu.com/question/2092952717853571036
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位4. 国台办回应蔡康永现身沈伯洋竞选活动，在大是大非问题上没有任何模糊的空间，哪些信息值得关注？
+https://www.zhihu.com/question/2093662309310620149
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位5. 如何看待网红女装品牌 CHICYOU 因使用狸花猫背部毛皮制作毛领遭网友抵制？哪些渠道的毛皮可能涉嫌违法？
+https://www.zhihu.com/question/2093001535881832037
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位6. 群演疑似猥亵女演员，《此处通往繁星》剧组回应将撤下争议片段并调查，若属实剧组及涉事演员需承担哪些责任？
 https://www.zhihu.com/question/2093629140502933840
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位7. 《琅琊榜》的权谋真的很幼稚吗？
-https://www.zhihu.com/question/1888170995262682445
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 如何看待网红女装品牌 CHICYOU 因使用狸花猫背部毛皮制作毛领遭网友抵制？哪些渠道的毛皮可能涉嫌违法？
-https://www.zhihu.com/question/2093001535881832037
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位9. 传 RTX508024GB 定档 2027 年 Q1，如何看待该卡接任新旗舰？
-https://www.zhihu.com/question/2093345148323342210
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位10. 人类为什么不能培育一种专门象牙很长的大象？非得去猎杀野生大象？
+榜位7. 人类为什么不能培育一种专门象牙很长的大象？非得去猎杀野生大象？
 https://www.zhihu.com/question/1968989779006829679
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位8. 如何看待二本毕业女生待业一年，仍坚持找一份双休工作？是不愿降低生活标准，还是对就业市场缺乏认知？
+https://www.zhihu.com/question/2093283021692605069
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位9. 郑钦文夺冠，上汽奥迪发文「AUDI 全系买一送一」，送的却是车模引发热议，大家怎么看？
+https://www.zhihu.com/question/2092980571324379933
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位10. 传 RTX508024GB 定档 2027 年 Q1，如何看待该卡接任新旗舰？
+https://www.zhihu.com/question/2093345148323342210
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 bilibili 热搜｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. Karsa终于跟RNG老队友重逢
 https://search.bilibili.com/all?keyword=Karsa%E7%BB%88%E4%BA%8E%E8%B7%9FRNG%E8%80%81%E9%98%9F%E5%8F%8B%E9%87%8D%E9%80%A2
 
@@ -271,159 +271,159 @@ https://search.bilibili.com/all?keyword=Karsa%E7%BB%88%E4%BA%8E%E8%B7%9FRNG%E8%8
 https://search.bilibili.com/all?keyword=%E6%9C%B1%E9%9B%80%E4%BA%8C%E5%8F%B7%E6%94%B9%E8%BF%9B%E5%9E%8B%E9%81%A5%E5%9B%9B%E8%BF%90%E8%BD%BD%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%88%90%E5%8A%9F
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位3. 如何从零开始学习AI
-https://search.bilibili.com/all?keyword=%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0AI
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位4. BFX战胜KT 德玛西亚杯
-https://search.bilibili.com/all?keyword=KT+BFX
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位5. IG世界赛出征拍摄花絮
-https://search.bilibili.com/all?keyword=IG%E4%B8%96%E7%95%8C%E8%B5%9B%E5%87%BA%E5%BE%81%E6%8B%8D%E6%91%84%E8%8A%B1%E7%B5%AE
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位6. BFX战胜KT赛后数据
-https://search.bilibili.com/all?keyword=BFX%E6%88%98%E8%83%9CKT%E8%B5%9B%E5%90%8E%E6%95%B0%E6%8D%AE
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位7. 北京JDG战胜济南RW侠 KPL
+榜位3. 北京JDG战胜济南RW侠 KPL
 https://search.bilibili.com/all?keyword=%E5%8C%97%E4%BA%ACJDG+%E6%B5%8E%E5%8D%97RW%E4%BE%A0
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 大范围雨雪将至山东
+榜位4. 数学家如何评价OpenAI公开论文
+https://search.bilibili.com/all?keyword=%E6%95%B0%E5%AD%A6%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7OpenAI%E5%85%AC%E5%BC%80%E8%AE%BA%E6%96%87
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位5. 如何从零开始学习AI
+https://search.bilibili.com/all?keyword=%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0AI
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位6. 大范围雨雪将至山东
 https://search.bilibili.com/all?keyword=%E5%A4%A7%E8%8C%83%E5%9B%B4%E9%9B%A8%E9%9B%AA%E5%B0%86%E8%87%B3%E5%B1%B1%E4%B8%9C
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位9. 广东地区什么时候才能入秋
+榜位7. 广东地区什么时候才能入秋
 https://search.bilibili.com/all?keyword=%E5%B9%BF%E4%B8%9C%E5%9C%B0%E5%8C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%89%8D%E8%83%BD%E5%85%A5%E7%A7%8B
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位10. 获赠大熊猫需要满足哪些条件
+榜位8. 获赠大熊猫需要满足哪些条件
 https://search.bilibili.com/all?keyword=%E8%8E%B7%E8%B5%A0%E5%A4%A7%E7%86%8A%E7%8C%AB%E9%9C%80%E8%A6%81%E6%BB%A1%E8%B6%B3%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位9. BFX战胜KT 德玛西亚杯
+https://search.bilibili.com/all?keyword=KT+BFX
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位10. BFX战胜KT赛后数据
+https://search.bilibili.com/all?keyword=BFX%E6%88%98%E8%83%9CKT%E8%B5%9B%E5%90%8E%E6%95%B0%E6%8D%AE
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 今日头条｜热榜前10｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 榜位1. 多地组织筛查干部档案有何深意
 https://www.toutiao.com/trending/7696389122834910756/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位2. 妈妈误寄50斤羊粪到女儿母校放了20天
-https://www.toutiao.com/trending/7696126314881744922/
+榜位2. 媒体：医疗体制改革已经进入深水区
+https://www.toutiao.com/trending/7696519242660711972/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位3. 2026年前三季度外贸量质齐升
 https://www.toutiao.com/trending/7696012365628309547/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位4. 香港发生珠宝大劫案
-https://www.toutiao.com/trending/7696454851983000091/
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位5. “女老虎”包惠被开除党籍
-https://www.toutiao.com/trending/7696446731625434651/
-
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位6. 2027年或成史上最热一年
+榜位4. 2027年或成史上最热一年
 https://www.toutiao.com/trending/7695657946173407275/
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位5. 妈妈误寄50斤羊粪到女儿母校放了20天
+https://www.toutiao.com/trending/7696126314881744922/
+
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+榜位6. 进餐顺序或对血糖水平产生影响
+https://www.toutiao.com/trending/7695957333637562422/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位7. 男子每天2包烟抽38年心脏血管堵90%
 https://www.toutiao.com/trending/7696350382911307803/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位8. 官方通报女子高铁开免提电话1小时
-https://www.toutiao.com/trending/7695661082907823679/
+榜位8. 蛋黄到底该不该吃
+https://www.toutiao.com/trending/7696119939293970441/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 榜位9. 李吉妮爆冷逆转头号种子萨巴伦卡
 https://www.toutiao.com/trending/7696523740821065252/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-榜位10. 我军匕首枪曝光
-https://www.toutiao.com/trending/7695912246354149427/
+榜位10. 贵州小伙零彩礼迎娶1.8米俄罗斯姑娘
+https://www.toutiao.com/trending/7696423986665754122/
 
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 36氪快讯｜热榜前10｜失败
-快照：2026-10-15 02:51；本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充
+快照：2026-10-15 06:34；本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充
 
 36氪人气榜｜热榜前10｜失败
-快照：2026-10-15 02:51；本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充
+快照：2026-10-15 06:34；本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充
 
 TechCrunch｜RSS最新5条（非热榜）｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
-最新1. YouTube Music launches new labels as AI-generated music floods streaming platforms
-https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/
-发布时间：2026-10-14T18:23:46
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
+最新1. CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes
+https://techcrunch.com/2026/10/14/cedardb-wants-one-database-to-handle-both-transactions-and-analytics-as-ai-agents-raise-the-stakes/
+发布时间：2026-10-14T22:00:00
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新2. Apate sends AI agents undercover to get scammed so they can gather fraud intelligence
-https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/
-发布时间：2026-10-14T18:00:00
+最新2. Ambani’s Jio seeks to raise $3.2B in what could be India’s biggest IPO
+https://techcrunch.com/2026/10/14/ambanis-jio-seeks-to-raise-3-2b-in-what-could-be-indias-biggest-ipo/
+发布时间：2026-10-14T21:48:20
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新3. Mosqitter is turning its mosquito traps into an AI-powered surveillance network
-https://techcrunch.com/2026/10/14/mosqitter-is-turning-its-mosquito-traps-into-an-ai-powered-surveillance-network/
-发布时间：2026-10-14T17:00:00
+最新3. Flock CEO says its microphones detect ‘just gunshots’ — its website says different
+https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/
+发布时间：2026-10-14T21:30:33
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新4. Prismm helps banks keep inherited money in-house
-https://techcrunch.com/2026/10/14/prismm-helps-banks-keep-inherited-money-in-house/
-发布时间：2026-10-14T16:00:00
+最新4. Colossal Biosciences announces new AI platform to help accelerate de-extinction efforts
+https://techcrunch.com/2026/10/14/colossal-biosciences-announces-new-ai-platform-to-help-accelerate-de-extinction-efforts/
+发布时间：2026-10-14T21:00:00
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新5. Deezer will soon let you filter out AI-generated music
-https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/
-发布时间：2026-10-14T15:16:04
+最新5. Flock CEO: We haven’t ‘fired’ any police departments as customers
+https://techcrunch.com/2026/10/14/flock-ceo-we-havent-fired-any-police-departments-as-customers/
+发布时间：2026-10-14T20:26:25
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 The Verge｜RSS最新5条（非热榜）｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
-最新1. Now that Character.AI is going bankrupt, what happens to all of its users’ data?
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
+最新1. Eight states sue OpenAI, saying ChatGPT isn’t safe for kids
+https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety
+发布时间：2026-10-14T21:11:28
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+最新2. Microsoft and Japan took down a cybercrime network behind over a billion scam messages
+https://www.theverge.com/tech/1011487/microsoft-scam-messages-marketplace-takedown
+发布时间：2026-10-14T20:03:43
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+最新3. The AI race is back on
+https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on
+发布时间：2026-10-14T19:06:03
+未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
+最新4. Now that Character.AI is going bankrupt, what happens to all of its users’ data?
 https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy
 发布时间：2026-10-14T18:47:54
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新2. As a TV enthusiast, I was hoping for more from the Apple TV 4K
+最新5. As a TV enthusiast, I was hoping for more from the Apple TV 4K
 https://www.theverge.com/tech/1011324/apple-tv-4k-missed-features
 发布时间：2026-10-14T18:38:59
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新3. YouTube sticks new labels on AI-generated songs
-https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label
-发布时间：2026-10-14T18:22:56
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新4. Save up to 20 percent on gift cards for REI, Barnes & Noble, and more
-https://www.theverge.com/gadgets/1010749/google-play-gift-card-deal-sale
-发布时间：2026-10-14T18:20:55
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新5. Apple’s new HomeView smart display is $10 cheaper at Amazon
-https://www.theverge.com/gadgets/1011227/apple-homeview-smart-display-deal-sale
-发布时间：2026-10-14T17:24:42
-未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 CNBC Business｜RSS最新5条（非热榜）｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
-最新1. 10-year Treasury yields gives up earlier gain as traders await more U.S. data
-https://www.cnbc.com/2026/10/14/us-treasury-yields-cpi-inflation-report.html
-发布时间：2026-10-14T18:50:27
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
+最新1. Jim Cramer says don't give up on this unpredictable market. Here's why
+https://www.cnbc.com/2026/10/14/cramer-stock-market-selloff-inflation.html
+发布时间：2026-10-14T22:19:32
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新2. Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos
-https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html
-发布时间：2026-10-14T18:48:44
+最新2. Traders pile into 'bubble puts' on CoreWeave as neocloud stocks plunge
+https://www.cnbc.com/2026/10/14/coreweave-put-options-ai-trade.html
+发布时间：2026-10-14T21:19:09
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 最新3. Trump to appeal order blocking White House from banning MS NOW, CNN and Politico
 https://www.cnbc.com/2026/10/14/trump-appeals-white-house-ban-judge.html
-发布时间：2026-10-14T18:44:27
+发布时间：2026-10-14T21:18:46
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新4. AI infrastructure stocks tumble. Here's a few reasons for the sell-off
-https://www.cnbc.com/investingclub/2026/10/14/ai-infrastructure-stocks-tumble-heres-a-few-reasons-for-the-sell-off-.html
-发布时间：2026-10-14T18:41:11
+最新4. OpenAI bugging suspect booked one-way ticket to Saudi Arabia with family before arrest
+https://www.cnbc.com/2026/10/14/openai-alfozan-recording-raed-ventures.html
+发布时间：2026-10-14T21:18:13
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
-最新5. CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge
-https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html
-发布时间：2026-10-14T18:23:37
+最新5. OpenAI sued by 8 states over ChatGPT safety concerns
+https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html
+发布时间：2026-10-14T21:09:20
 未进入候选：商业关键词组合未命中；这不代表没有商业价值，请人工复核
 
 界面新闻｜RSS最新5条（非热榜）｜成功
-快照：2026-10-15 02:51；最新抓取快照；原始列表未经过商业关键词过滤
+快照：2026-10-15 06:34；最新抓取快照；原始列表未经过商业关键词过滤
 最新1. 欧洲主要股指收盘普涨
 https://www.jiemian.com/article/15191342.html
 发布时间：2026-10-14T15:36:34

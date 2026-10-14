@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-15T02:51:36+08:00",
-  "raw_rows": 1245,
-  "matched_rows": 4,
+  "generated_at": "2026-10-15T06:34:58+08:00",
+  "raw_rows": 1305,
+  "matched_rows": 5,
   "new_articles": 0,
   "events": 8,
   "daily_candidates": [],
@@ -828,7 +828,7 @@
       "name": "微博",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -892,28 +892,28 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "胡先煦 刁卓",
-          "url": "https://s.weibo.com/weibo?q=%E8%83%A1%E5%85%88%E7%85%A6+%E5%88%81%E5%8D%93",
+          "title": "肖战这把火已经烧到天边了",
+          "url": "https://s.weibo.com/weibo?q=%23%E8%82%96%E6%88%98%E8%BF%99%E6%8A%8A%E7%81%AB%E5%B7%B2%E7%BB%8F%E7%83%A7%E5%88%B0%E5%A4%A9%E8%BE%B9%E4%BA%86%23",
           "rank": 7,
-          "first_found": "02-51",
+          "first_found": "06-34",
           "published_at": null,
           "position": 7,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "奚梦瑶和现在简直判若两人",
-          "url": "https://s.weibo.com/weibo?q=%23%E5%A5%9A%E6%A2%A6%E7%91%B6%E5%92%8C%E7%8E%B0%E5%9C%A8%E7%AE%80%E7%9B%B4%E5%88%A4%E8%8B%A5%E4%B8%A4%E4%BA%BA%23",
+          "title": "徐梦洁演技口碑",
+          "url": "https://s.weibo.com/weibo?q=%23%E5%BE%90%E6%A2%A6%E6%B4%81%E6%BC%94%E6%8A%80%E5%8F%A3%E7%A2%91%23",
           "rank": 8,
-          "first_found": "02-51",
+          "first_found": "06-34",
           "published_at": null,
           "position": 8,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "虎跳峡观景台跳江者尚未打捞到",
-          "url": "https://s.weibo.com/weibo?q=%23%E8%99%8E%E8%B7%B3%E5%B3%A1%E8%A7%82%E6%99%AF%E5%8F%B0%E8%B7%B3%E6%B1%9F%E8%80%85%E5%B0%9A%E6%9C%AA%E6%89%93%E6%8D%9E%E5%88%B0%23",
+          "title": "7天6夜堵截蒙古国火灾330余公里",
+          "url": "https://s.weibo.com/weibo?q=%237%E5%A4%A96%E5%A4%9C%E5%A0%B5%E6%88%AA%E8%92%99%E5%8F%A4%E5%9B%BD%E7%81%AB%E7%81%BE330%E4%BD%99%E5%85%AC%E9%87%8C%23",
           "rank": 9,
           "first_found": "02-51",
           "published_at": null,
@@ -922,8 +922,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "iPhoneDuo维修价格出炉",
-          "url": "https://s.weibo.com/weibo?q=%23iPhoneDuo%E7%BB%B4%E4%BF%AE%E4%BB%B7%E6%A0%BC%E5%87%BA%E7%82%89%23",
+          "title": "虎跳峡观景台跳江者尚未打捞到",
+          "url": "https://s.weibo.com/weibo?q=%23%E8%99%8E%E8%B7%B3%E5%B3%A1%E8%A7%82%E6%99%AF%E5%8F%B0%E8%B7%B3%E6%B1%9F%E8%80%85%E5%B0%9A%E6%9C%AA%E6%89%93%E6%8D%9E%E5%88%B0%23",
           "rank": 10,
           "first_found": "02-51",
           "published_at": null,
@@ -938,12 +938,12 @@
       "name": "抖音",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
-          "title": "中朝新鸭绿江大桥将开通",
-          "url": "https://www.douyin.com/hot/2694377",
+          "title": "小鹏正式宣布对外卖技术",
+          "url": "https://www.douyin.com/hot/2694823",
           "rank": 1,
           "first_found": "02-51",
           "published_at": null,
@@ -972,8 +972,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "英雄联盟S16 LPL出征片",
-          "url": "https://www.douyin.com/hot/2694892",
+          "title": "中朝新鸭绿江大桥将开通",
+          "url": "https://www.douyin.com/hot/2694377",
           "rank": 4,
           "first_found": "02-51",
           "published_at": null,
@@ -992,8 +992,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "火遍外网的ChinaHaul是什么",
-          "url": "https://www.douyin.com/hot/2694649",
+          "title": "英雄联盟S16 LPL出征片",
+          "url": "https://www.douyin.com/hot/2694892",
           "rank": 6,
           "first_found": "02-51",
           "published_at": null,
@@ -1002,8 +1002,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "小鹏正式宣布对外卖技术",
-          "url": "https://www.douyin.com/hot/2694823",
+          "title": "火遍外网的ChinaHaul是什么",
+          "url": "https://www.douyin.com/hot/2694649",
           "rank": 7,
           "first_found": "02-51",
           "published_at": null,
@@ -1048,7 +1048,7 @@
       "name": "百度热搜",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1122,8 +1122,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "佛光寺小狗门上刨洞被做成文创爆火",
-          "url": "https://www.baidu.com/s?wd=%E4%BD%9B%E5%85%89%E5%AF%BA%E5%B0%8F%E7%8B%97%E9%97%A8%E4%B8%8A%E5%88%A8%E6%B4%9E%E8%A2%AB%E5%81%9A%E6%88%90%E6%96%87%E5%88%9B%E7%88%86%E7%81%AB",
+          "title": "铁打的片仔癀 流水的董事长",
+          "url": "https://www.baidu.com/s?wd=%E9%93%81%E6%89%93%E7%9A%84%E7%89%87%E4%BB%94%E7%99%80+%E6%B5%81%E6%B0%B4%E7%9A%84%E8%91%A3%E4%BA%8B%E9%95%BF",
           "rank": 8,
           "first_found": "02-51",
           "published_at": null,
@@ -1132,8 +1132,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "小伙徒步时高反 野外支帐篷躺卧3天",
-          "url": "https://www.baidu.com/s?wd=%E5%B0%8F%E4%BC%99%E5%BE%92%E6%AD%A5%E6%97%B6%E9%AB%98%E5%8F%8D+%E9%87%8E%E5%A4%96%E6%94%AF%E5%B8%90%E7%AF%B7%E8%BA%BA%E5%8D%A73%E5%A4%A9",
+          "title": "今年最有腔调的老人都在山东",
+          "url": "https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E6%9C%80%E6%9C%89%E8%85%94%E8%B0%83%E7%9A%84%E8%80%81%E4%BA%BA%E9%83%BD%E5%9C%A8%E5%B1%B1%E4%B8%9C",
           "rank": 9,
           "first_found": "02-51",
           "published_at": null,
@@ -1158,7 +1158,7 @@
       "name": "财联社热门",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1268,7 +1268,7 @@
       "name": "华尔街见闻",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1302,8 +1302,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "AI交易逻辑生变！从日韩到美国，全球芯片股惨跌，明星IPO搁浅、长鑫技术突破接连敲警钟",
-          "url": "https://wallstreetcn.com/articles/3783558",
+          "title": "10月加息押注所剩无几，今晚，美国CPI能否再添一击？",
+          "url": "https://wallstreetcn.com/articles/3783596",
           "rank": 4,
           "first_found": "02-51",
           "published_at": null,
@@ -1312,28 +1312,28 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "10月加息押注所剩无几，今晚，美国CPI能否再添一击？",
-          "url": "https://wallstreetcn.com/articles/3783596",
+          "title": "财报季开局银行股分化，美股指收跌，存储股续跌打压科技股，苹果盘中市值突破5万亿",
+          "url": "https://wallstreetcn.com/articles/3783492",
           "rank": 5,
           "first_found": "02-51",
           "published_at": null,
           "position": 5,
-          "decision": "未进入候选",
-          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
-        },
-        {
-          "title": "财报季开局银行股分化，美股指收跌，存储股续跌打压科技股，苹果盘中市值突破5万亿",
-          "url": "https://wallstreetcn.com/articles/3783492",
-          "rank": 6,
-          "first_found": "02-51",
-          "published_at": null,
-          "position": 6,
           "decision": "行情或娱乐规则排除",
           "decision_reason": "原始标题仍保留，方便人工复核"
         },
         {
           "title": "美联储三把手威廉姆斯：今年或再加息一次，目前认为2027年没有必要加息",
           "url": "https://wallstreetcn.com/articles/3783560",
+          "rank": 6,
+          "first_found": "02-51",
+          "published_at": null,
+          "position": 6,
+          "decision": "未进入候选",
+          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
+        },
+        {
+          "title": "传奇投资者Paul Tudor Jones：当前美股类似2000年科网泡沫破灭前夕，我明年将全年做空",
+          "url": "https://wallstreetcn.com/articles/3783579",
           "rank": 7,
           "first_found": "02-51",
           "published_at": null,
@@ -1342,8 +1342,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "传奇投资者Paul Tudor Jones：当前美股类似2000年科网泡沫破灭前夕，我明年将全年做空",
-          "url": "https://wallstreetcn.com/articles/3783579",
+          "title": "报道：Anthropic今天将公布Q3财务数据",
+          "url": "https://wallstreetcn.com/articles/3783580",
           "rank": 8,
           "first_found": "02-51",
           "published_at": null,
@@ -1352,10 +1352,10 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "报道：Anthropic今天将公布Q3财务数据",
-          "url": "https://wallstreetcn.com/articles/3783580",
+          "title": "内存崩溃，高盛：谁高位接盘了美股科技？",
+          "url": "https://wallstreetcn.com/articles/3783632",
           "rank": 9,
-          "first_found": "02-51",
+          "first_found": "06-34",
           "published_at": null,
           "position": 9,
           "decision": "未进入候选",
@@ -1378,7 +1378,7 @@
       "name": "知乎",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1392,8 +1392,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "怎么看 OpenAI 的 NS 数学证明被发现其实没遵循 Spanish program？",
-          "url": "https://www.zhihu.com/question/2093654423369152454",
+          "title": "美国 9 月 CPI 数据公布，同比上涨 3.7%，高于市场预期的 3.6%，释放了哪些信号？",
+          "url": "https://www.zhihu.com/question/2093811458442092969",
           "rank": 2,
           "first_found": "02-51",
           "published_at": null,
@@ -1402,8 +1402,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "国台办回应蔡康永现身沈伯洋竞选活动，在大是大非问题上没有任何模糊的空间，哪些信息值得关注？",
-          "url": "https://www.zhihu.com/question/2093662309310620149",
+          "title": "四部门要求新车研发必须包含「两冬一夏」测试，会改变汽车行业格局吗？",
+          "url": "https://www.zhihu.com/question/2092952717853571036",
           "rank": 3,
           "first_found": "02-51",
           "published_at": null,
@@ -1412,8 +1412,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "美国 9 月 CPI 数据公布，同比上涨 3.7%，高于市场预期的 3.6%，释放了哪些信号？",
-          "url": "https://www.zhihu.com/question/2093811458442092969",
+          "title": "国台办回应蔡康永现身沈伯洋竞选活动，在大是大非问题上没有任何模糊的空间，哪些信息值得关注？",
+          "url": "https://www.zhihu.com/question/2093662309310620149",
           "rank": 4,
           "first_found": "02-51",
           "published_at": null,
@@ -1422,8 +1422,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "四部门要求新车研发必须包含「两冬一夏」测试，会改变汽车行业格局吗？",
-          "url": "https://www.zhihu.com/question/2092952717853571036",
+          "title": "如何看待网红女装品牌 CHICYOU 因使用狸花猫背部毛皮制作毛领遭网友抵制？哪些渠道的毛皮可能涉嫌违法？",
+          "url": "https://www.zhihu.com/question/2093001535881832037",
           "rank": 5,
           "first_found": "02-51",
           "published_at": null,
@@ -1442,8 +1442,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "《琅琊榜》的权谋真的很幼稚吗？",
-          "url": "https://www.zhihu.com/question/1888170995262682445",
+          "title": "人类为什么不能培育一种专门象牙很长的大象？非得去猎杀野生大象？",
+          "url": "https://www.zhihu.com/question/1968989779006829679",
           "rank": 7,
           "first_found": "02-51",
           "published_at": null,
@@ -1452,8 +1452,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "如何看待网红女装品牌 CHICYOU 因使用狸花猫背部毛皮制作毛领遭网友抵制？哪些渠道的毛皮可能涉嫌违法？",
-          "url": "https://www.zhihu.com/question/2093001535881832037",
+          "title": "如何看待二本毕业女生待业一年，仍坚持找一份双休工作？是不愿降低生活标准，还是对就业市场缺乏认知？",
+          "url": "https://www.zhihu.com/question/2093283021692605069",
           "rank": 8,
           "first_found": "02-51",
           "published_at": null,
@@ -1462,8 +1462,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "传 RTX508024GB 定档 2027 年 Q1，如何看待该卡接任新旗舰？",
-          "url": "https://www.zhihu.com/question/2093345148323342210",
+          "title": "郑钦文夺冠，上汽奥迪发文「AUDI 全系买一送一」，送的却是车模引发热议，大家怎么看？",
+          "url": "https://www.zhihu.com/question/2092980571324379933",
           "rank": 9,
           "first_found": "02-51",
           "published_at": null,
@@ -1472,8 +1472,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "人类为什么不能培育一种专门象牙很长的大象？非得去猎杀野生大象？",
-          "url": "https://www.zhihu.com/question/1968989779006829679",
+          "title": "传 RTX508024GB 定档 2027 年 Q1，如何看待该卡接任新旗舰？",
+          "url": "https://www.zhihu.com/question/2093345148323342210",
           "rank": 10,
           "first_found": "02-51",
           "published_at": null,
@@ -1488,7 +1488,7 @@
       "name": "bilibili 热搜",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1512,8 +1512,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "如何从零开始学习AI",
-          "url": "https://search.bilibili.com/all?keyword=%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0AI",
+          "title": "北京JDG战胜济南RW侠 KPL",
+          "url": "https://search.bilibili.com/all?keyword=%E5%8C%97%E4%BA%ACJDG+%E6%B5%8E%E5%8D%97RW%E4%BE%A0",
           "rank": 3,
           "first_found": "02-51",
           "published_at": null,
@@ -1522,8 +1522,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "BFX战胜KT 德玛西亚杯",
-          "url": "https://search.bilibili.com/all?keyword=KT+BFX",
+          "title": "数学家如何评价OpenAI公开论文",
+          "url": "https://search.bilibili.com/all?keyword=%E6%95%B0%E5%AD%A6%E5%AE%B6%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7OpenAI%E5%85%AC%E5%BC%80%E8%AE%BA%E6%96%87",
           "rank": 4,
           "first_found": "02-51",
           "published_at": null,
@@ -1532,8 +1532,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "IG世界赛出征拍摄花絮",
-          "url": "https://search.bilibili.com/all?keyword=IG%E4%B8%96%E7%95%8C%E8%B5%9B%E5%87%BA%E5%BE%81%E6%8B%8D%E6%91%84%E8%8A%B1%E7%B5%AE",
+          "title": "如何从零开始学习AI",
+          "url": "https://search.bilibili.com/all?keyword=%E5%A6%82%E4%BD%95%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0AI",
           "rank": 5,
           "first_found": "02-51",
           "published_at": null,
@@ -1542,8 +1542,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "BFX战胜KT赛后数据",
-          "url": "https://search.bilibili.com/all?keyword=BFX%E6%88%98%E8%83%9CKT%E8%B5%9B%E5%90%8E%E6%95%B0%E6%8D%AE",
+          "title": "大范围雨雪将至山东",
+          "url": "https://search.bilibili.com/all?keyword=%E5%A4%A7%E8%8C%83%E5%9B%B4%E9%9B%A8%E9%9B%AA%E5%B0%86%E8%87%B3%E5%B1%B1%E4%B8%9C",
           "rank": 6,
           "first_found": "02-51",
           "published_at": null,
@@ -1552,8 +1552,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "北京JDG战胜济南RW侠 KPL",
-          "url": "https://search.bilibili.com/all?keyword=%E5%8C%97%E4%BA%ACJDG+%E6%B5%8E%E5%8D%97RW%E4%BE%A0",
+          "title": "广东地区什么时候才能入秋",
+          "url": "https://search.bilibili.com/all?keyword=%E5%B9%BF%E4%B8%9C%E5%9C%B0%E5%8C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%89%8D%E8%83%BD%E5%85%A5%E7%A7%8B",
           "rank": 7,
           "first_found": "02-51",
           "published_at": null,
@@ -1562,8 +1562,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "大范围雨雪将至山东",
-          "url": "https://search.bilibili.com/all?keyword=%E5%A4%A7%E8%8C%83%E5%9B%B4%E9%9B%A8%E9%9B%AA%E5%B0%86%E8%87%B3%E5%B1%B1%E4%B8%9C",
+          "title": "获赠大熊猫需要满足哪些条件",
+          "url": "https://search.bilibili.com/all?keyword=%E8%8E%B7%E8%B5%A0%E5%A4%A7%E7%86%8A%E7%8C%AB%E9%9C%80%E8%A6%81%E6%BB%A1%E8%B6%B3%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6",
           "rank": 8,
           "first_found": "02-51",
           "published_at": null,
@@ -1572,8 +1572,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "广东地区什么时候才能入秋",
-          "url": "https://search.bilibili.com/all?keyword=%E5%B9%BF%E4%B8%9C%E5%9C%B0%E5%8C%BA%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%89%8D%E8%83%BD%E5%85%A5%E7%A7%8B",
+          "title": "BFX战胜KT 德玛西亚杯",
+          "url": "https://search.bilibili.com/all?keyword=KT+BFX",
           "rank": 9,
           "first_found": "02-51",
           "published_at": null,
@@ -1582,8 +1582,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "获赠大熊猫需要满足哪些条件",
-          "url": "https://search.bilibili.com/all?keyword=%E8%8E%B7%E8%B5%A0%E5%A4%A7%E7%86%8A%E7%8C%AB%E9%9C%80%E8%A6%81%E6%BB%A1%E8%B6%B3%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6",
+          "title": "BFX战胜KT赛后数据",
+          "url": "https://search.bilibili.com/all?keyword=BFX%E6%88%98%E8%83%9CKT%E8%B5%9B%E5%90%8E%E6%95%B0%E6%8D%AE",
           "rank": 10,
           "first_found": "02-51",
           "published_at": null,
@@ -1598,7 +1598,7 @@
       "name": "今日头条",
       "kind": "热榜前10",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
@@ -1612,10 +1612,10 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "妈妈误寄50斤羊粪到女儿母校放了20天",
-          "url": "https://www.toutiao.com/trending/7696126314881744922/",
+          "title": "媒体：医疗体制改革已经进入深水区",
+          "url": "https://www.toutiao.com/trending/7696519242660711972/",
           "rank": 2,
-          "first_found": "02-51",
+          "first_found": "06-34",
           "published_at": null,
           "position": 2,
           "decision": "未进入候选",
@@ -1632,8 +1632,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "香港发生珠宝大劫案",
-          "url": "https://www.toutiao.com/trending/7696454851983000091/",
+          "title": "2027年或成史上最热一年",
+          "url": "https://www.toutiao.com/trending/7695657946173407275/",
           "rank": 4,
           "first_found": "02-51",
           "published_at": null,
@@ -1642,8 +1642,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "“女老虎”包惠被开除党籍",
-          "url": "https://www.toutiao.com/trending/7696446731625434651/",
+          "title": "妈妈误寄50斤羊粪到女儿母校放了20天",
+          "url": "https://www.toutiao.com/trending/7696126314881744922/",
           "rank": 5,
           "first_found": "02-51",
           "published_at": null,
@@ -1652,10 +1652,10 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "2027年或成史上最热一年",
-          "url": "https://www.toutiao.com/trending/7695657946173407275/",
+          "title": "进餐顺序或对血糖水平产生影响",
+          "url": "https://www.toutiao.com/trending/7695957333637562422/",
           "rank": 6,
-          "first_found": "02-51",
+          "first_found": "06-34",
           "published_at": null,
           "position": 6,
           "decision": "未进入候选",
@@ -1672,8 +1672,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "官方通报女子高铁开免提电话1小时",
-          "url": "https://www.toutiao.com/trending/7695661082907823679/",
+          "title": "蛋黄到底该不该吃",
+          "url": "https://www.toutiao.com/trending/7696119939293970441/",
           "rank": 8,
           "first_found": "02-51",
           "published_at": null,
@@ -1692,8 +1692,8 @@
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "我军匕首枪曝光",
-          "url": "https://www.toutiao.com/trending/7695912246354149427/",
+          "title": "贵州小伙零彩礼迎娶1.8米俄罗斯姑娘",
+          "url": "https://www.toutiao.com/trending/7696423986665754122/",
           "rank": 10,
           "first_found": "02-51",
           "published_at": null,
@@ -1708,7 +1708,7 @@
       "name": "36氪快讯",
       "kind": "热榜前10",
       "status": "失败",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充",
       "items": []
     },
@@ -1717,7 +1717,7 @@
       "name": "36氪人气榜",
       "kind": "热榜前10",
       "status": "失败",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "本次来源抓取失败，详细原因见Actions日志；不使用旧榜单填充",
       "items": []
     },
@@ -1726,55 +1726,55 @@
       "name": "TechCrunch",
       "kind": "RSS最新5条（非热榜）",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
-          "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
-          "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+          "title": "CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes",
+          "url": "https://techcrunch.com/2026/10/14/cedardb-wants-one-database-to-handle-both-transactions-and-analytics-as-ai-agents-raise-the-stakes/",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:23:46",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T22:00:00",
           "position": 1,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
-          "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+          "title": "Ambani’s Jio seeks to raise $3.2B in what could be India’s biggest IPO",
+          "url": "https://techcrunch.com/2026/10/14/ambanis-jio-seeks-to-raise-3-2b-in-what-could-be-indias-biggest-ipo/",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:00:00",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:48:20",
           "position": 2,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "Mosqitter is turning its mosquito traps into an AI-powered surveillance network",
-          "url": "https://techcrunch.com/2026/10/14/mosqitter-is-turning-its-mosquito-traps-into-an-ai-powered-surveillance-network/",
+          "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+          "url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T17:00:00",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:30:33",
           "position": 3,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "Prismm helps banks keep inherited money in-house",
-          "url": "https://techcrunch.com/2026/10/14/prismm-helps-banks-keep-inherited-money-in-house/",
+          "title": "Colossal Biosciences announces new AI platform to help accelerate de-extinction efforts",
+          "url": "https://techcrunch.com/2026/10/14/colossal-biosciences-announces-new-ai-platform-to-help-accelerate-de-extinction-efforts/",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T16:00:00",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:00:00",
           "position": 4,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "Deezer will soon let you filter out AI-generated music",
-          "url": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+          "title": "Flock CEO: We haven’t ‘fired’ any police departments as customers",
+          "url": "https://techcrunch.com/2026/10/14/flock-ceo-we-havent-fired-any-police-departments-as-customers/",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T15:16:04",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T20:26:25",
           "position": 5,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
@@ -1786,16 +1786,46 @@
       "name": "The Verge",
       "kind": "RSS最新5条（非热榜）",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
+        {
+          "title": "Eight states sue OpenAI, saying ChatGPT isn’t safe for kids",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+          "rank": null,
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:11:28",
+          "position": 1,
+          "decision": "未进入候选",
+          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
+        },
+        {
+          "title": "Microsoft and Japan took down a cybercrime network behind over a billion scam messages",
+          "url": "https://www.theverge.com/tech/1011487/microsoft-scam-messages-marketplace-takedown",
+          "rank": null,
+          "first_found": "06:34",
+          "published_at": "2026-10-14T20:03:43",
+          "position": 2,
+          "decision": "未进入候选",
+          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
+        },
+        {
+          "title": "The AI race is back on",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on",
+          "rank": null,
+          "first_found": "06:34",
+          "published_at": "2026-10-14T19:06:03",
+          "position": 3,
+          "decision": "未进入候选",
+          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
+        },
         {
           "title": "Now that Character.AI is going bankrupt, what happens to all of its users’ data?",
           "url": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
           "rank": null,
           "first_found": "02:51",
           "published_at": "2026-10-14T18:47:54",
-          "position": 1,
+          "position": 4,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
@@ -1805,36 +1835,6 @@
           "rank": null,
           "first_found": "02:51",
           "published_at": "2026-10-14T18:38:59",
-          "position": 2,
-          "decision": "未进入候选",
-          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
-        },
-        {
-          "title": "YouTube sticks new labels on AI-generated songs",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label",
-          "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:22:56",
-          "position": 3,
-          "decision": "未进入候选",
-          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
-        },
-        {
-          "title": "Save up to 20 percent on gift cards for REI, Barnes & Noble, and more",
-          "url": "https://www.theverge.com/gadgets/1010749/google-play-gift-card-deal-sale",
-          "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:20:55",
-          "position": 4,
-          "decision": "未进入候选",
-          "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
-        },
-        {
-          "title": "Apple’s new HomeView smart display is $10 cheaper at Amazon",
-          "url": "https://www.theverge.com/gadgets/1011227/apple-homeview-smart-display-deal-sale",
-          "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T17:24:42",
           "position": 5,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
@@ -1846,25 +1846,25 @@
       "name": "CNBC Business",
       "kind": "RSS最新5条（非热榜）",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
-          "title": "10-year Treasury yields gives up earlier gain as traders await more U.S. data",
-          "url": "https://www.cnbc.com/2026/10/14/us-treasury-yields-cpi-inflation-report.html",
+          "title": "Jim Cramer says don't give up on this unpredictable market. Here's why",
+          "url": "https://www.cnbc.com/2026/10/14/cramer-stock-market-selloff-inflation.html",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:50:27",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T22:19:32",
           "position": 1,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
-          "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+          "title": "Traders pile into 'bubble puts' on CoreWeave as neocloud stocks plunge",
+          "url": "https://www.cnbc.com/2026/10/14/coreweave-put-options-ai-trade.html",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:48:44",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:19:09",
           "position": 2,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
@@ -1874,27 +1874,27 @@
           "url": "https://www.cnbc.com/2026/10/14/trump-appeals-white-house-ban-judge.html",
           "rank": null,
           "first_found": "02:51",
-          "published_at": "2026-10-14T18:44:27",
+          "published_at": "2026-10-14T21:18:46",
           "position": 3,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "AI infrastructure stocks tumble. Here's a few reasons for the sell-off",
-          "url": "https://www.cnbc.com/investingclub/2026/10/14/ai-infrastructure-stocks-tumble-heres-a-few-reasons-for-the-sell-off-.html",
+          "title": "OpenAI bugging suspect booked one-way ticket to Saudi Arabia with family before arrest",
+          "url": "https://www.cnbc.com/2026/10/14/openai-alfozan-recording-raed-ventures.html",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:41:11",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:18:13",
           "position": 4,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
         },
         {
-          "title": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
-          "url": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html",
+          "title": "OpenAI sued by 8 states over ChatGPT safety concerns",
+          "url": "https://www.cnbc.com/2026/10/14/openai-sued-by-8-states-over-chatgpt-safety-concerns-.html",
           "rank": null,
-          "first_found": "02:51",
-          "published_at": "2026-10-14T18:23:37",
+          "first_found": "06:34",
+          "published_at": "2026-10-14T21:09:20",
           "position": 5,
           "decision": "未进入候选",
           "decision_reason": "商业关键词组合未命中；这不代表没有商业价值，请人工复核"
@@ -1906,7 +1906,7 @@
       "name": "界面新闻",
       "kind": "RSS最新5条（非热榜）",
       "status": "成功",
-      "snapshot_at": "2026-10-15 02:51",
+      "snapshot_at": "2026-10-15 06:34",
       "reason": "最新抓取快照；原始列表未经过商业关键词过滤",
       "items": [
         {
